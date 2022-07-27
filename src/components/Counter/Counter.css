@@ -1,0 +1,40 @@
+.counter-container{
+    border: 2px solid black;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.counter button{
+    width: 150px;
+    font-family: poppins;
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.counter .counter-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.counter .counter-content button{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-family: poppins;
+}
+.counter .counter-content span{
+    font-size: 25px;
+}

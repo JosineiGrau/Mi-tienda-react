@@ -1,0 +1,33 @@
+.productos-filtros{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.productos-filtros .productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+
+.carga{
+    border: 7px solid rgb(225, 225, 225);
+    border-top-color: rgb(0, 0, 0) ;
+    border-top-style: groove ;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin: auto;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
