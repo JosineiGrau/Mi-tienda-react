@@ -13,7 +13,7 @@ para el curso de Coder House.
 
 Clonar el proyecto
 ```bash
-  git clone https://github.com/JosineiGrau/Mi-tienda-react.gitt
+  git clone https://github.com/JosineiGrau/Mi-tienda-react.git
 ```
 
 Ir al directorio del proyecto
@@ -32,7 +32,7 @@ Instalar dependencias
 Inicie el servidor
 
 ```bash
-  npm run start
+  npm start
 ```
 
 
@@ -68,9 +68,10 @@ Inicie el servidor
       <Footer/>
 </>
 ```
-## Demo
+## Gif
 
-![Gif de Ecommerce](file:///C:/Users/josue/Downloads/Mi%20tienda%20-%20Personal_%20Microsoft_%20Edge%202022-08-05%2000-26-32_Trim%20(1).gif)
+![Mi tienda - Personal_ Microsoft_ Edge 2022-08-05 00-26-32_Trim (1)](https://user-images.githubusercontent.com/103330270/183149547-efffaabf-fbb9-4607-8e2e-4e28e76af7d6.gif)
+
 
 
 ## Screenshots
