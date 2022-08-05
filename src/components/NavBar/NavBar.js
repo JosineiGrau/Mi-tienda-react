@@ -1,4 +1,5 @@
 import "./NavBar.css"
+import { Link } from 'react-router-dom';
 import CarWidget from "../CarWidget/CarWidget"
 import HeartWidget from "../HeartWidget/HeartWidget"
 import SearchWidget from "../SearchWidget/SearchWidget"
@@ -17,17 +18,17 @@ const NavBar = () =>{
             </div>
             <div className="header">
                 <div className="nav-bar">
-                    <h1>MiTienda</h1>
+                    <Link to="/">MiTienda</Link>
                     <div className="nav">
                         <div className="blur-nav"></div>
                         <nav>
                             <button className="close" id="close-nav"><i className="fa-solid fa-x"></i></button>
                             <ul>
-                                <li><button title="hombre">Hombre <i className="fa-solid fa-angle-right"></i></button></li>
-                                <li><button title="mujer" >Mujer <i className="fa-solid fa-angle-right"></i></button></li>
-                                <li><button title="niños" >Niños <i className="fa-solid fa-angle-right"></i></button></li>
-                                <li><button title="ofertas" >Ofertas <i className="fa-solid fa-angle-right"></i></button></li>
-                                <li><button title="tecnología" >Tecnología <i className="fa-solid fa-angle-right"></i></button></li>
+                                <li><Link to= "" title="hombre">Hombre <i className="fa-solid fa-angle-right"></i></Link></li>
+                                <li><Link to= "" title="mujer" >Mujer <i className="fa-solid fa-angle-right"></i></Link></li>
+                                <li><Link to= "" title="niños" >Niños <i className="fa-solid fa-angle-right"></i></Link></li>
+                                <li><Link to= "" title="ofertas" >Ofertas <i className="fa-solid fa-angle-right"></i></Link></li>
+                                <li><Link to= "/tecnologia" title="tecnología" >Tecnología <i className="fa-solid fa-angle-right"></i></Link></li>
                             </ul>
                             <div className="preguntas">
                                 <button title="ayuda">Ayuda <i className="fa-solid fa-circle-question"></i></button>

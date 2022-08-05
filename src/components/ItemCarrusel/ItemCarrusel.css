@@ -1,0 +1,53 @@
+.carrusel-producto{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 426px;
+    height: 576px;
+    padding: 15px 15px;
+    background-color: white;
+    transition: 0.3s ease all;
+    border:  1px solid black;
+}
+.carrusel-producto .producto-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrusel-producto .producto-card .producto-precio{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}   
+.carrusel-producto .producto-card .producto-precio a{
+    text-decoration: none;
+    color: black;
+    font-family: poppins;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+.carrusel-producto .producto-card .producto-precio a:hover{
+    text-decoration: underline;
+}
+.carrusel-producto .producto-card .producto-precio p{
+    color: black;
+    font-family: poppins;
+    font-size: 15px;
+}
+.carrusel-producto .producto-card span{
+    color: black;
+    font-family: poppins;
+    font-size: 12px;
+}
+.carrusel-producto .img-card img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit:contain;
+    cursor: pointer;
+}

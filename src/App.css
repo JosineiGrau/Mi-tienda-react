@@ -21,3 +21,11 @@ body ::-webkit-scrollbar-thumb{
     background-color: #c4c4c4;
     border-radius: 5px;
 }
+.container{
+    max-width: 1800px;
+    margin: auto;
+}
+.container-content{
+    max-width: 1440px;
+    margin: auto;
+}

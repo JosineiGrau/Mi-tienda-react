@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# ¡Hola, soy Josinei! 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Este es mi Ecommerce
 
-In the project directory, you can run:
+Este es mi proyecto que está hecho con "React JS", 
+para el curso de Coder House.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Ejecutar localmente
+### Asegurese de estar en la ultima rama.
 
-### `npm test`
+Clonar el proyecto
+```bash
+  git clone https://github.com/JosineiGrau/Mi-tienda-react.gitt
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ir al directorio del proyecto
 
-### `npm run build`
+```bash
+  cd my-project
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instalar dependencias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Inicie el servidor
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  npm run start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Routes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- La ruta "/" (por default) muestra la página de inicio y el listado de todos los productos (ItemListContainer).
 
-## Learn More
+- La ruta "/tecnologia" nos muestra una sección de todos los productos de Tecnologia
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- La ruta "/tecnologia/:category" muestra los productos de tecnologia filtrados según la Categoria que eligas. Es el (ItemListContainer) + la función del filtro
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- La ruta "/tecnologia/marca/:marca" muestra todos los productos de la marca que elijas.
 
-### Code Splitting
+- La ruta "/tecnologia/detail/:productoId" muestra el detalle del producto que has escogido.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- La ruta "/not_found" muestra la página de error404 cuando no encuentra coincidencia con los links 
+  - La ruta "*" define que toda otra ruta que no encuentra lo que va hacer es mandarlo al "/not_found" con el <Navigate to="/not_found" />
+- La ruta "/Detalle/:id" muestra el detalle del producto seleccionado mediante el link "ver más", ubicando el producto mediante su id.
 
-### Analyzing the Bundle Size
+```
+<>
+      <NavBar/>
+      <Routes>
+          <Route path='/' element={<Inicio/>}/>
+          <Route path='tecnologia' element={<Tecnologia/>}>
+            <Route path=':categoryId' element={<Tecnologia/>}/>
+          </Route>
+          <Route path='tecnologia/marca/:marca' element={<Tecnologia/>}/>
+          <Route path='tecnologia/detail/:productoId' element={<ItemDetailContainer/>}/>
+          <Route path='/not_found' element={<PageNotFound/>}/>
+          <Route path='*' element={<Navigate to="/not_found" />}/>
+      </Routes>
+      <Footer/>
+</>
+```
+## Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Gif de Ecommerce](file:///C:/Users/josue/Downloads/Mi%20tienda%20-%20Personal_%20Microsoft_%20Edge%202022-08-05%2000-26-32_Trim%20(1).gif)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Screenshots
 
-### Advanced Configuration
+![App Screenshot](https://i.ibb.co/tPyv3bH/Captura-de-pantalla-2022-08-05-142851.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![App Screenshot](https://i.ibb.co/m4J2D5F/Captura-de-pantalla-2022-08-05-142943.jpg)
 
-### Deployment
+![App Screenshot](https://i.ibb.co/jJVcPcQ/Captura-de-pantalla-2022-08-05-143012.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## 🚀 Sobre mí
+Me estoy preparando para ser un  full stack developer...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 🛠 Skills
+JAVASCRIPT, REACT, SASS, HTML, CSS ,FIGMA,
+
+
+## Feedback
+
+Si tiene algún comentario, comuníquese con nosotros en jgrausalazar9@gmail.com
+

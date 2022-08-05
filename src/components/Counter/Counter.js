@@ -14,16 +14,18 @@ const Counter = ({onAdd, stock, initial}) =>{
         }
     }
     return(
-        <div className="counter-container">
-            <div className="counter">
-                <div className="counter-content">
-                    <button onClick={decrement} disabled = {count === initial ? true : null }>-</button>
-                    <span>{count}</span>
-                    <button onClick={increment} disabled = {count === stock ? true : null }>+</button>
+                <div className="counter">
+                    <div className="counter-content">
+                        <button onClick={decrement} disabled = {count === initial ? true : null }>-</button>
+                        <span>{count}</span>
+                        <button onClick={increment} disabled = {count === stock ? true : null }>+</button>
+                    </div>
+                    
+                    <div className="item-add-to-card">
+                        <button onClick={()=> onAdd(count)} disabled={stock === 0 ? true : null}>Agregar al carrito</button>
+                    </div>
                 </div>
-                <button onClick={()=> onAdd(count)} disabled={stock === 0 ? true : null}>Agregar al carrito</button>
-            </div>
-        </div>
+                
         
     )
     

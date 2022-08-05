@@ -1,7 +1,13 @@
+/* .container{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+} */
 .productos-filtros{
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    padding: 100px 0;
 }
 .productos-filtros .productos{
     display: flex;

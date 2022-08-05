@@ -2,45 +2,66 @@ import { useState, useEffect } from "react"
 import Item from "../Item/Item"
 import { productsList } from "../../asyncMock"
 import "./ItemList.css"
+import { useParams } from "react-router-dom"
 
 const ItemList = () => {
 
     const [products, setProducts] = useState([])
 
+    const {categoryId, marca} = useParams()
+
+
     const getProducts = ()=>{
         return new Promise((resolve)=>{
             setTimeout(()=>{
                 resolve(productsList)
-            }, 3000)
+            },800)    
+        })
+    }
+
+
+    const getProductsByCategory = (categoryId)=>{
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(productsList.filter(prod => prod.categoria === categoryId))
+            },500)
             
         })
     }
 
-    const getProductsFromBack = async () => {
-        try{
-            const data = await getProducts()
-            setProducts(data)
-        }
-        catch(error){
-            console.log(error);
-        }
-        finally{
-            const preloader = document.getElementById("preloader")
-            preloader.innerHTML= ""
-        }
+    const getProductsByMarca= (marca)=>{
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(productsList.filter(prod => prod.marca === marca))
+            },500)
+            
+        })
     }
 
     useEffect(()=>{
-        getProductsFromBack()
-    },[]);
+        if (marca) {
+            getProductsByMarca(marca)
+            .then(produ => {
+                setProducts(produ)
+            })
+        }
+        else if(categoryId){
+            getProductsByCategory(categoryId)
+            .then(prod => {
+                setProducts(prod)
+            })
+        }
+        else if(!categoryId){
+            getProducts().then(data => {
+                setProducts(data)
+            })
+        }
+    },[categoryId]);
 
 
 
     return(
-        <div className="productos-filtros">
-            <div className="preloader" id="preloader">
-                    <div className="carga"></div>
-            </div>
+        <div className="productos-filtros container-content">
             <div className="productos">
                 {products.map(({nombre, precio, img, id, stock}) => {
                     return(
