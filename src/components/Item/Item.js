@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom"
 import "./Item.css"
 const Item = ({nombre, precio, img, id, stock}) =>{
+
+    const corazon = (e) => {
+        e.stopPropagation()
+        console.log("hice click en el corazon")
+    }
+
     return(
         <div className="producto">
             <div className="producto-card">
@@ -13,7 +19,7 @@ const Item = ({nombre, precio, img, id, stock}) =>{
                 </div>
             </div>
             <Link to={`/tecnologia/detail/${id}`} title={nombre} className="img-card"><img src= {img} alt={nombre} /></Link>
-            <button className="favorito">
+            <button className="favorito" onClick={corazon}>
                 <i className="fa fa-heart"></i>
             </button>
         </div>

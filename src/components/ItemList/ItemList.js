@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react"
-import Item from "../Item/Item"
-import { productsList } from "../../asyncMock"
 import "./ItemList.css"
+import Item from "../Item/Item"
+import { useState, useEffect } from "react"
+import { productsList } from "../../asyncMock"
 import { useParams } from "react-router-dom"
 
 const ItemList = () => {
 
     const [products, setProducts] = useState([])
+    const [loading , setLoading] = useState(false)
 
     const {categoryId, marca} = useParams()
 
@@ -15,10 +16,9 @@ const ItemList = () => {
         return new Promise((resolve)=>{
             setTimeout(()=>{
                 resolve(productsList)
-            },800)    
+            },500)    
         })
     }
-
 
     const getProductsByCategory = (categoryId)=>{
         return new Promise((resolve)=>{
@@ -39,10 +39,18 @@ const ItemList = () => {
     }
 
     useEffect(()=>{
+        setLoading(true)
         if (marca) {
+            
             getProductsByMarca(marca)
-            .then(produ => {
-                setProducts(produ)
+            .then(prod => {
+                setProducts(prod)
+            })
+            .catch( error => {
+                console.log(error);
+            })
+            .finally(()=>{
+                setLoading(false)
             })
         }
         else if(categoryId){
@@ -50,16 +58,35 @@ const ItemList = () => {
             .then(prod => {
                 setProducts(prod)
             })
-        }
-        else if(!categoryId){
-            getProducts().then(data => {
-                setProducts(data)
+            .catch( error => {
+                console.log(error);
+            })
+            .finally(()=>{
+                setLoading(false)
             })
         }
-    },[categoryId]);
+        else if(!categoryId){
+            getProducts().then(response => {
+                setProducts(response)
+            })
+            .catch( error => {
+                console.log(error);
+            })
+            .finally(()=>{
+                setLoading(false)
+            })
+        }
+    },[categoryId,marca]);
 
-
-
+    if(loading){
+        return (
+            <div className="preloader">
+                <div className="preloader-content">
+                    <div className="carga"></div>
+                </div>
+            </div>
+        )
+    }
     return(
         <div className="productos-filtros container-content">
             <div className="productos">

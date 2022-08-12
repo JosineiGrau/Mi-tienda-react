@@ -67,10 +67,11 @@
     cursor: pointer;
     color: black;
     font-size: 25px;
-    transition: 0.3s ease all;
+    display: none;
 }
-.producto .favorito:active{
-    color: red
+
+.producto:hover .favorito{
+    display: block;
 }
 .producto .img-card img{
     width: 100%;

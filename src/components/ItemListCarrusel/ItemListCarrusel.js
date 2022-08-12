@@ -5,13 +5,14 @@ import "./ItemListCarrusel.css"
 
 const ItemListCarrusel = ({greeting}) => {
     const [products, setProducts] = useState([])
+
     const slideShow = useRef(undefined) 
 
     const getProducts = () =>{
         return new Promise((resolve) => {
             setTimeout(()=>{
                 resolve(productsList)
-            })
+            },100)
         })
     }
 
@@ -73,7 +74,7 @@ const ItemListCarrusel = ({greeting}) => {
             setTimeout(()=>{
                 slideShow.current.style.transition = "1000ms ease-out all";
                 slideShow.current.style.transform = `translateX(0)`;
-            },0)
+            },10)
         }
     }
     
@@ -99,6 +100,7 @@ const ItemListCarrusel = ({greeting}) => {
                             id={id}
                             stock={stock}
                             />
+                            
                         )
                     })}
                 </div>

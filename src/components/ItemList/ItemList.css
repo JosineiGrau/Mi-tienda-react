@@ -17,7 +17,17 @@
     gap:30px;
 }
 
-
+.preloader{
+    width: 100%;
+    height: 600px;
+}
+.preloader .preloader-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .carga{
     border: 7px solid rgb(225, 225, 225);
     border-top-color: rgb(0, 0, 0) ;
