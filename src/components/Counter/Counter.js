@@ -23,7 +23,7 @@ const Counter = ({onAdd, stock, initial,label}) =>{
                     </div>
                     
                     <div className="item-add-to-card">
-                        <button onClick={()=> onAdd(count)} disabled={stock === 0 ? true : null}>{label}</button>
+                        <button onClick={()=> onAdd(count)} disabled ={stock === 0 ? true : null}>{label}</button>
                     </div>
                 </div>
                 

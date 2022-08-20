@@ -66,7 +66,7 @@
     font-family: poppins;
     font-size: 18px;
 }
-.item-container .item-detail-section .item-specifications .item-specification-column .page-cart a{
+.item-container .item-detail-section .item-specifications .item-specification-column .page-cart span{
     font-family: poppins;
     font-size: 17px;
     color: black;

@@ -1,10 +1,17 @@
+import { useContext } from "react"
+import HeartContext from "../../context/HeartContext"
 import "./HeartWidget.css"
 
-const HeartWidget = () => {
+const HeartWidget = ({myOnclick}) => {
+
+    const {getHeart} = useContext(HeartContext)
+
+    const quantity = getHeart()
+
     return(
-        <button className="heart">    
+        <button onClick={myOnclick} className="heart">    
             <i className="fa fa-heart"></i>
-            <span id="contadorFavoritos">+</span>
+            <span>{quantity}</span>
         </button>
     )
 }

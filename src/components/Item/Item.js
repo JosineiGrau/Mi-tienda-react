@@ -1,25 +1,40 @@
 import { Link } from "react-router-dom"
+import { useContext, useRef } from "react"
+import HeartContext from "../../context/HeartContext"
 import "./Item.css"
-const Item = ({nombre, precio, img, id, stock}) =>{
+const Item = ({name, price, img, id, stock,genero}) =>{
 
-    const corazon = (e) => {
+    const {addItem} = useContext(HeartContext)
+    const corazon = useRef()
+    console.log(addItem);
+
+    const productosEnFavoritos = (e) => {
         e.stopPropagation()
-        console.log("hice click en el corazon")
+
+        // corazon.current.style.color = "red"
+        // corazon.current.style.display = "block"
+        
+
+        const productToAdd = {
+            id,name,price,img,stock
+        }
+
+        addItem(productToAdd)
     }
 
     return(
         <div className="producto">
             <div className="producto-card">
                 <div className="producto-precio">
-                    <Link to={`/tecnologia/detail/${id}`} title={nombre}>{nombre}</Link>
-                    <p>S/.{precio}</p>
+                    <Link to={`/${genero}/Detail/${id}`} title={name}>{name}</Link>
+                    <p>S/.{price}</p>
                 </div>
                 <div className="ver-detalles">
-                    <Link to={`/tecnologia/detail/${id}`} title="VER DETALLES">VER DETALLES</Link>
+                    <Link to={`/${genero}/Detail/${id}`} title="VER DETALLES">VER DETALLES</Link>
                 </div>
             </div>
-            <Link to={`/tecnologia/detail/${id}`} title={nombre} className="img-card"><img src= {img} alt={nombre} /></Link>
-            <button className="favorito" onClick={corazon}>
+            <Link to={`/${genero}/Detail/${id}`} title={name} className="img-card"><img src= {img} alt={name} /></Link>
+            <button className="favorito" onClick={productosEnFavoritos} ref={corazon}>
                 <i className="fa fa-heart"></i>
             </button>
         </div>

@@ -1,0 +1,325 @@
+.registrarse{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registrarse .form-register{
+    width: 500px;
+    height: 450px;
+}
+.registrarse .modal-registrarse{
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+                -15px 15px 20px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 5px;
+}
+.registrarse .modal-registrarse h1{
+    font-family: Poppins;
+    text-align: center;
+    font-size: 40px;
+}
+.registrarse .modal-registrarse p{
+    font-family: poppins;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px
+}
+.registrarse .modal-registrarse .formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.registrarse .modal-registrarse .formulario .nombre{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .nombre input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .nombre label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .nombre input:valid ~ label ,.registrarse .modal-registrarse .formulario .nombre input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+            
+.registrarse .modal-registrarse .formulario .apellido{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .apellido input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .apellido label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .apellido input:valid ~ label ,.registrarse .modal-registrarse .formulario .apellido input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+
+
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .dia{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .dia input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .dia input::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .dia label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:valid ~ label, .registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input:valid ~ label , .registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+             
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año input::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año input:valid ~ label , .registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+            
+.registrarse .modal-registrarse .formulario .email{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .email input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .email label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .email input:valid ~ label , .registrarse .modal-registrarse .formulario .email input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.registrarse .modal-registrarse .formulario .email .error{ 
+    color: red;
+    font-family: poppins;
+    font-size: 13px;
+}
+.registrarse .modal-registrarse .formulario .password{
+    position: relative;
+}
+.registrarse .modal-registrarse .formulario .password input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.registrarse .modal-registrarse .formulario .password label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.registrarse .modal-registrarse .formulario .password input:valid ~ label , .registrarse .modal-registrarse .formulario .password input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.registrarse .modal-registrarse .formulario .password .error{ 
+    color: red;
+    font-family: poppins;
+    font-size: 13px;
+}
+.registrarse .modal-registrarse .formulario .sexo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+               
+.registrarse .modal-registrarse .formulario .sexo .sexo-hombre label{
+    font-family: poppins;
+    font-size:15px;
+    cursor: point
+}
+                
+.registrarse .modal-registrarse .formulario .sexo .sexo-mujer label{
+    font-family: poppins;
+    font-size:15px;
+    cursor: pointer;
+}
+        
+
+.registrarse .modal-registrarse .btn-registrarse{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: poppins;
+    cursor: pointer;
+}
+.registrarse .modal-registrarse .btn-registrarse i{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.registrarse .modal-registrarse .btn-registrarse:disabled{
+    opacity: 0.6;
+}

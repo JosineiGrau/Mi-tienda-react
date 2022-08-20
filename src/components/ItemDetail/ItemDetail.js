@@ -2,61 +2,69 @@ import "./ItemDetail.css"
 import { Link } from "react-router-dom"
 import Counter from "../Counter/Counter"
 import { useState, useContext } from "react"
-import { CartContext } from "../../context/CartContext"
+import CartContext  from "../../context/CartContext"
+import NotificationContext from "../Notification/Notification"
 
-const ItemDetail = ({id,nombre,marca,cantidad,precio,img,imgs,description,stock}) =>{
 
+const ItemDetail = ({id,name,marca,price,img,imgs,description,stock}) =>{
+
+    const {addItem } = useContext(CartContext)
+    
+    const {setNotification} = useContext(NotificationContext)
+    
     const [quantity, setQuantity] = useState(0)
-
-    const {addItem} = useContext(CartContext)
 
     const productosEnCarrito = (quantity) => {
         console.log(`La cantidad agregada es: ${quantity}`);
         setQuantity(quantity)
 
+        // setQuantityAdd(quantity)
+
         const productToAdd = {
-            id,nombre,quantity,precio
+            id,name,quantity,price,img,stock
         }
         addItem(productToAdd)
+
+        setNotification("Producto agregado", "correcto", "productToCart")
     }
     
     return(
             <div className="item-container container-content">
                 <section className="item-images-section">
                     <div className="images">
-                        <img src={img} alt={nombre}/>
+                        <img src={img} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img2} alt={nombre}/>
+                        <img src={imgs?.img2} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img3} alt={nombre}/>
+                        <img src={imgs?.img3} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img4} alt={nombre}/>
+                        <img src={imgs?.img4} alt={name}/>
                     </div>
                 </section>
                 <section className="item-detail-section">
                     <div className="detail-basic">
                         <div className="item-marca">
-                            <Link to={`/tecnologia/marca/${marca}`}>{marca}</Link>
+                            <Link to={`/Tecnologia/Marca/${marca}`}>{marca}</Link>
                         </div>
                         <div className="item-name">
-                            <h1>{nombre}</h1>
+                            <h1>{name}</h1>
                         </div>
                     </div>
                     <div>
                         <div className="item-specifications">
                             <div className="item-specification-column">
                                 <div className="item-price">
-                                    <p>S/.{precio}</p>
+                                    <p>S/.{price}</p>
                                 </div>
                                 {
                                     quantity === 0 ? (
                                         <Counter stock={stock} initial={1} onAdd={productosEnCarrito} label= "Agregar al carrito"/>
                                     ) : (
                                         <div className="page-cart">
-                                            <Link to="/cart-checkout">Ir al Carrito</Link>
+                                            <span>Agregado al Carrito</span>
                                         </div>
                                         
                                     )

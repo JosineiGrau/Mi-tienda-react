@@ -20,12 +20,20 @@ header{
    align-items: center;
    gap: 10px;
 }
-
 .header-top .top-info .info button{
     background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 13px;
+ }
+
+.header-top .top-info .info a{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
 }
 
 .header {
@@ -58,7 +66,6 @@ header{
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(2px);
     z-index: 2;
-    display: none;
 }
 .header .nav-bar .nav nav .close{
     display: none;
@@ -119,6 +126,7 @@ header{
     background-color:white ;
     z-index: 3;
 }
+
 .header .nav-bar .nav .nav-carrito.activo{
     position: fixed;
     top: 0px;
@@ -180,11 +188,160 @@ header{
 }
 .header .nav-bar .nav .nav-carrito .row-2 .producto-carrito p{
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: poppins;
     color: #000000;
 }
-
+.header .nav-bar .nav .nav-carrito .lista-y-comprar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-x: hidden;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito ::-webkit-scrollbar{
+    width: 7px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito ::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 5px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: initial;
+    gap: 40px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito{
+    display: flex;
+    align-items: initial;
+    gap: 10px;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 10px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito img{
+    width: 40%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:initial;
+    width: 100%;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-bottom: 15px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto a{
+    color: black;
+    font-size: 15px;
+    font-family: poppins;
+    width: 80%;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto button{
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto button i{
+    color: black;
+    font-size: 15px
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio span{
+    color: black;
+    font-family: poppins;
+    font-size: 15px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad {
+    display: flex;
+    align-items: center;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border: 1px solid black;
+    color:white;
+    cursor: pointer;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad button:disabled{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad .numeroCantidad{
+    color: black;
+    font-family: poppins;
+    font-size: 15px;
+    width: 30px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora{
+    position: relative;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    padding: 30px 20px;
+    box-shadow: 0 0px 15px rgba(0,0,0,15%);
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal {
+    margin-bottom: 20px ;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal p{
+    font-size: 16px;
+    font-family: poppins;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal span{
+    font-size: 16px;
+    font-family: poppins;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .comprar{
+    margin-top: 15px;
+}
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .comprar a{
+    font-size: 18px;
+    font-family: poppins;
+    background-color: #000;
+    color: white;
+    border: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 .header .nav-bar .search-heart-car{
     display: flex;
+    align-items: center;
     gap: 10px;
 }

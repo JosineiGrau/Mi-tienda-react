@@ -4,7 +4,7 @@ import { useState } from "react"
 const SearchWidget = () => {
 
     const [busqueda, setBusqueda] = useState("")
-    console.log(busqueda);
+    // console.log(busqueda);
 
     const handleSubmit = (e)=>{
         e.preventDefault()

@@ -1,82 +1,41 @@
 import "./ItemList.css"
 import Item from "../Item/Item"
 import { useState, useEffect } from "react"
-import { productsList } from "../../asyncMock"
 import { useParams } from "react-router-dom"
+import { getDocs, collection, query, where } from "firebase/firestore"
+import { db } from "../../services/firebase"
 
 const ItemList = () => {
 
     const [products, setProducts] = useState([])
     const [loading , setLoading] = useState(false)
-
-    const {categoryId, marca} = useParams()
-
-
-    const getProducts = ()=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{
-                resolve(productsList)
-            },500)    
-        })
-    }
-
-    const getProductsByCategory = (categoryId)=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{
-                resolve(productsList.filter(prod => prod.categoria === categoryId))
-            },500)
-            
-        })
-    }
-
-    const getProductsByMarca= (marca)=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{
-                resolve(productsList.filter(prod => prod.marca === marca))
-            },500)
-            
-        })
-    }
-
+    const {categoryId, marca, generoProd} = useParams()
+    
+    console.log(categoryId);
+    
     useEffect(()=>{
         setLoading(true)
-        if (marca) {
-            
-            getProductsByMarca(marca)
-            .then(prod => {
-                setProducts(prod)
+
+        const collectionRef =   generoProd ? query(collection(db, "productsList"), where("genero", "==", generoProd)):
+                                marca ? query(collection(db, "productsList"), where("marca", "==", marca )) :
+                                query(collection(db, "productsList"), where("category", "==", categoryId )) 
+
+        
+
+        getDocs(collectionRef).then(response =>{
+            console.log(response);
+            const products = response.docs.map(doc => {
+                const data = doc.data()
+                return {id: doc.id, ...data}
             })
-            .catch( error => {
-                console.log(error);
-            })
-            .finally(()=>{
-                setLoading(false)
-            })
-        }
-        else if(categoryId){
-            getProductsByCategory(categoryId)
-            .then(prod => {
-                setProducts(prod)
-            })
-            .catch( error => {
-                console.log(error);
-            })
-            .finally(()=>{
-                setLoading(false)
-            })
-        }
-        else if(!categoryId){
-            getProducts().then(response => {
-                setProducts(response)
-            })
-            .catch( error => {
-                console.log(error);
-            })
-            .finally(()=>{
-                setLoading(false)
-            })
-        }
-    },[categoryId,marca]);
+            setProducts(products)
+        }).catch(error =>{
+            console.log(error);
+        })
+        .finally(()=>{
+            setLoading(false)
+        })
+    },[categoryId,marca,generoProd]);
 
     if(loading){
         return (
@@ -87,17 +46,19 @@ const ItemList = () => {
             </div>
         )
     }
+    
     return(
         <div className="productos-filtros container-content">
             <div className="productos">
-                {products.map(({nombre, precio, img, id, stock}) => {
+                {products.map(({name, price, img, id, stock,genero}) => {
                     return(
                         <Item 
                         key={id}
-                        nombre={nombre}
-                        precio={precio}
+                        name={name}
+                        price={price}
                         img={img}
                         id={id}
+                        genero={genero}
                         />
                     )
                     

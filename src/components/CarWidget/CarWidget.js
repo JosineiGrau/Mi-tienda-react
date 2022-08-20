@@ -1,21 +1,21 @@
 import "./CarWidget.css";
 import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
+import CartContext  from "../../context/CartContext";
 
 
-const CarWidget = () => {
+const CarWidget = ({myOnClick}) => {
   const { getQuantity } = useContext(CartContext)
+
   const quantity = getQuantity()
 
-  console.log(quantity);
 
 
   return (
-    <Link to= "/cart-checkout" className="car">
-      <i className="fa fa-cart-shopping"></i>
-      <span id="contadorCarrito">{quantity}</span>
-    </Link>
+      <button onClick={myOnClick} className="car">
+        <i className="fa fa-cart-shopping"></i>
+        <span>{quantity}</span>
+      </button>
+   
   );
 };
 export default CarWidget;

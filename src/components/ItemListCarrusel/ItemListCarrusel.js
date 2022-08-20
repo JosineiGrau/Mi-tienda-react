@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import { productsList } from "../../asyncMock"
 import ItemCarrusel from "../ItemCarrusel/ItemCarrusel"
+import { getDocs, collection } from "firebase/firestore" 
+import { db } from "../../services/firebase"
 import "./ItemListCarrusel.css"
 
 const ItemListCarrusel = ({greeting}) => {
@@ -8,26 +9,16 @@ const ItemListCarrusel = ({greeting}) => {
 
     const slideShow = useRef(undefined) 
 
-    const getProducts = () =>{
-        return new Promise((resolve) => {
-            setTimeout(()=>{
-                resolve(productsList)
-            },100)
-        })
-    }
-
-    const getProductsFromBack = async () => {
-        try{
-            const data = await getProducts()
-            setProducts(data)
-        }
-        catch(error){
-            console.log(error);
-        }
-    }
-
     useEffect(()=>{
-        getProductsFromBack()
+        getDocs(collection(db,"productsList"))
+        .then((response => {
+            const products = response.docs.map(doc => {
+                const data = doc.data()
+                return {id: doc.id, ...data}
+            })
+            setProducts(products)
+        }))
+
     },[]);
 
     
@@ -90,12 +81,12 @@ const ItemListCarrusel = ({greeting}) => {
            
             <div className="carrusel-list" >
                 <div className="productos" ref={slideShow}>
-                    {products.map(({nombre, precio, img, id, stock}) => {
+                    {products.map(({name, price, img, id, stock}) => {
                         return(
                             <ItemCarrusel 
                             key={id}
-                            nombre={nombre}
-                            precio={precio}
+                            name={name}
+                            price={price}
                             img={img}
                             id={id}
                             stock={stock}

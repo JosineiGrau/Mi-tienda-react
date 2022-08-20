@@ -69,7 +69,6 @@
     font-size: 25px;
     display: none;
 }
-
 .producto:hover .favorito{
     display: block;
 }
