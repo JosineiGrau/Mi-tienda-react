@@ -1,14 +1,21 @@
-import { useContext} from "react"
+import { useContext } from "react"
 import CartContext from "../../context/CartContext"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-const CartList = ({myOnClick, myCondition, other}) => {
+const CartList = ({myOnClick, myCondition, other,mySetFn}) => {
 
     const {cart, removeItem, getPrice, aumentar,descontar} = useContext(CartContext)
-
-
-
+    
     const PrecioTotal = getPrice()
+
+    const navigate = useNavigate()
+    
+    const handleClick = () => {
+        mySetFn(false)
+        navigate("/cart-checkout")
+    }
+
+
     
     return(
         <div className= {`${other || ""} ${myCondition === true && "activo"}`}>
@@ -35,7 +42,9 @@ const CartList = ({myOnClick, myCondition, other}) => {
                                             <img src= {img} alt={name}/>
                                             <div className="filtro-nombre-precio">
                                                 <div className="nombre-producto">
-                                                    <Link to= {`/tecnologia/detail/${id}`}>{name}</Link>
+                                                    <div onClick={myOnClick}>
+                                                        <Link  to= {`/tecnologia/detail/${id}`}>{name}</Link>
+                                                    </div>
                                                     <button onClick={()=> removeItem(id)}>
                                                         <i className="fa-solid fa-trash-can"></i>
                                                     </button>
@@ -50,6 +59,7 @@ const CartList = ({myOnClick, myCondition, other}) => {
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     )
                                 })}               
                             </div>
@@ -59,8 +69,8 @@ const CartList = ({myOnClick, myCondition, other}) => {
                                 <p>Precio Total: S/.<span>{PrecioTotal}</span></p>  
                             </div>
                                 <p>Simula el costo de envío en el siguiente paso.</p>
-                            <div className="comprar">
-                                <Link to={"/cart-checkout"} >COMPRAR AHORA</Link>
+                            <div className="comprar" onClick={handleClick}>
+                                <button>COMPRAR AHORA</button>
                             </div>
                         </div>
                     </div>

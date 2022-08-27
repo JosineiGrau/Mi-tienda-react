@@ -7,13 +7,28 @@ export const HeartProvider = ({children}) => {
     console.log(heart);
 
     const addItem = (productToAdd) =>{
-        setHeart([...heart, productToAdd])
+        if(!isInHeart(productToAdd.id)){
+            setHeart([...heart, productToAdd])
+        // } else {
+        //     const heartUpdate = heart.map(prod =>{
+        //         if(prod.id === productToAdd.id){
+        //             const productUpdate = {...prod, quantity: prod.quantity = 1 && 1}
+        //             return productUpdate
+        //         } else{
+        //             return prod
+        //         }
+        //     })
+        //     setHeart(heartUpdate)
+        }
     }
 
     const getHeart = () =>{
         let acc = heart.length
         return acc
 
+    }
+    const isInHeart = (id) => {
+        return heart.some(prod => prod.id === id)
     }
 
     const removeItem = (id) => {

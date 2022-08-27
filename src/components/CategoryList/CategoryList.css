@@ -1,9 +1,3 @@
-/* .container{
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    margin-bottom: 70px;
-} */
 
 .marca-list{
     display: flex;
@@ -13,7 +7,10 @@
     gap: 30px;
     margin-top: 70px;
 }
-.marca-list .marca-img{
+.marca-list .category{
+    position: relative;
+}
+.marca-list .category .marca-img{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,60 +20,25 @@
     border: none;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    filter: brightness(0.5);
 }
-.marca-list strong{
+.marca-list .category .marca-img img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    filter: blur(2px);
+}
+.marca-list .category strong{
     color: white;
     font-family: poppins;
     font-size: 15px;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.marca-list .celulares{
-    background: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)),
-        url(https://i.ibb.co/y0hVXSg/iphone-13-pro-max-gold-select.png);
-        background-position:center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-.marca-list .tablets{
-    background: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)),
-        url(https://i.ibb.co/BVsdZQy/ipad-pro-11-3era-g.webp);
-        background-position:center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-.marca-list .laptos{
-    background: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)),
-        url(https://i.ibb.co/k4mspbL/apple-macbook-pro.jpg);
-        background-position:center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-.marca-list .televisores{
-    background: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)),
-        url(https://i.ibb.co/vDbPfsf/18891311-01.jpg);
-        background-position:center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-.marca-list .smartwatch{
-    background: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)),
-        url(https://i.ibb.co/HC5g8nh/apple-watch-series-7.webp);
-        background-position:center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
+
+
+

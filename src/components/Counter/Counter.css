@@ -29,6 +29,11 @@
     font-family: poppins;
     color: black;
 }
+.counter .counter-content .stock{
+    font-size: 13px;
+    font-family: poppins;
+
+}
 .item-add-to-card button{
     font-family: poppins;
     font-size: 17px;
@@ -37,7 +42,20 @@
     color: white;
     cursor: pointer;
 }
-.counter-content span{
+.counter .counter-content span{
     font-size: 18px;
     font-family: poppins;
+}
+
+.counter .max-stock{ 
+    background-color: rgb(233, 220, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 300px;
+}
+.counter .max-stock span{ 
+    font-family: poppins;
+    font-size: 13px;
 }

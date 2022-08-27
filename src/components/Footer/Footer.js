@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return(
@@ -9,36 +10,36 @@ const Footer = () => {
                         <div className="footer-css footer-informacion">
                             <span>INFORMACIÓN DE LA TIENDA</span>
                             <div className="enlace">
-                                <a href="#"><p>Acerca de nuestra tienda</p></a>
+                                <Link to= "/"><p>Acerca de nuestra tienda</p></Link>
                             </div>
                             
                         </div>
                         <div className="footer-css footer-productos">
                             <span>PRODUCTOS</span>
                             <div className="enlace">
-                                <a href="#"><p>Zapatillas</p></a>
-                                <a href="#"><p>Calzado</p></a>
-                                <a href="#"><p>Chimpunes</p></a>
-                                <a href="#"><p>Ropa</p></a>
+                                <Link to= "/"><p>Zapatillas</p></Link>
+                                <Link to= "/"><p>CLinklzLinkdo</p></Link>
+                                <Link to= "/"><p>Chimpunes</p></Link>
+                                <Link to= "/"><p>Ropa</p></Link>
                             </div>
                             
                         </div>
                         <div className="footer-css footer-deportes">
                             <span>DEPORTES</span>
                             <div className="enlace">
-                                <a href="#"><p>Fútbol</p></a>
-                                <a href="#"><p>Running</p></a>
-                                <a href="#"><p>Gym</p></a>
-                                <a href="#"><p>Skateboarding</p></a>
+                                <Link to= "/"><p>Fútbol</p></Link>
+                                <Link to= "/"><p>Running</p></Link>
+                                <Link to= "/"><p>Gym</p></Link>
+                                <Link to= "/"><p>Skateboarding</p></Link>
                             </div>
                         </div>
                         <div className="footer-css footer-servicio-cliente">
                             <span>SERVICIO AL CLIENTE</span>
                             <div className="enlace">
-                                <a href="#"><p>Condiciones</p></a>
-                                <a href="#"><p>Sugerencias/Reclamos</p></a>
-                                <a href="#"><p>Guia de Tallas</p></a>
-                                <a href="#"><p>Cambios y Devoluciones</p></a>
+                                <Link to= "/"><p>Condiciones</p></Link>
+                                <Link to= "/"><p>Sugerencias/Reclamos</p></Link>
+                                <Link to= "/"><p>Guia de Tallas</p></Link>
+                                <Link to= "/"><p>Cambios y Devoluciones</p></Link>
                             </div>
                         </div>
                         <div className="footer-css footer-contacto">
@@ -52,8 +53,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="redes-sociales">
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i className="fa-brands fa-facebook-square"></i></a>
+                        <Link to= "/" ><i className="fa-brands fa-instagram"></i></Link>
+                        <Link to= "/" ><i className="fa-brands fa-facebook-square"></i></Link>
                     </div>
                 </div>
             </div>

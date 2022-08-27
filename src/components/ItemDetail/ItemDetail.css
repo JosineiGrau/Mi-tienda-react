@@ -62,6 +62,17 @@
     gap: 10px;
     /* border: 1px red solid; */
 }
+.item-container .item-detail-section .item-specifications .item-specification-column .sin-stock{ 
+    background-color: rgb(233, 220, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.item-container .item-detail-section .item-specifications .item-specification-column .sin-stock span{ 
+    font-family: poppins;
+    font-size: 18px;
+}
 .item-container .item-detail-section .item-specifications .item-specification-column .item-price{
     font-family: poppins;
     font-size: 18px;

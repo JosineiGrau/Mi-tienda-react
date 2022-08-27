@@ -1,26 +1,31 @@
 import { useState, useEffect, useRef } from "react"
 import ItemCarrusel from "../ItemCarrusel/ItemCarrusel"
-import { getDocs, collection } from "firebase/firestore" 
+import { getDocs, collection, where, query } from "firebase/firestore" 
 import { db } from "../../services/firebase"
+import { Link } from "react-router-dom"
 import "./ItemListCarrusel.css"
 
-const ItemListCarrusel = ({greeting}) => {
+const ItemListCarrusel = ({greeting,genero}) => {
     const [products, setProducts] = useState([])
 
     const slideShow = useRef(undefined) 
 
     useEffect(()=>{
-        getDocs(collection(db,"productsList"))
+
+        const collectionRef = query(collection(db,"productsList"), where("genero", "==", genero))
+
+        getDocs(collectionRef)
         .then((response => {
             const products = response.docs.map(doc => {
                 const data = doc.data()
                 return {id: doc.id, ...data}
             })
-            setProducts(products)
+            setProducts(products.slice(0,5))
         }))
-
-    },[]);
-
+        
+    },[genero]);
+    
+    console.log(products);
     
 
     const siguiente = ()=>{
@@ -72,7 +77,10 @@ const ItemListCarrusel = ({greeting}) => {
     return(
         <section className="carrusel container-content">
             <div className="carrusel-widget">
-                <h2>{greeting}</h2>
+                <div>
+                    <h2>{greeting}</h2>
+                    <Link to={`/${genero}/${genero}`}>Ver Todos</Link>
+                </div>
                 <div className="buttons">
                     <button onClick={anterior} className="carrusel-arrow carrusel-prev"><i className="fa-solid fa-angle-left"></i></button>
                     <button onClick={siguiente} className="carrusel-arrow carrusel-next"><i className="fa-solid fa-angle-right"></i></button>

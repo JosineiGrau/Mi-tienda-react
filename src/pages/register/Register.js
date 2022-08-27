@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 const Register = () => {
 
-    const [ user, setUser ] = useState({
+    const [ formUser, setFormUser ] = useState({
         email: "",
         password: "",
     })
@@ -16,13 +16,13 @@ const Register = () => {
 
 
     const handleChange = ({target: {name, value}}) => {
-        setUser({...user ,[name]: value})
+        setFormUser({...formUser ,[name]: value})
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError("")
         try{
-            await signup(user.email, user.password)
+            await signup(formUser.email, formUser.password)
             navigate("/login")
 
         } catch(error) {

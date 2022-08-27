@@ -16,7 +16,10 @@
     align-items: center;
     gap:30px;
 }
-
+.productos-filtros .productos .sin-productos h2{
+    font-family: poppins;
+    font-size: 30px;
+}
 .preloader{
     width: 100%;
     height: 600px;

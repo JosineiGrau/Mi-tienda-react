@@ -45,6 +45,17 @@
     font-family: poppins;
     font-size: 12px;
 }
+.carrusel-producto .producto-card .sin-stock{ 
+    background-color: rgb(233, 220, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.carrusel-producto .producto-card .sin-stock span{ 
+    font-family: poppins;
+    font-size: 18px;
+}
 .carrusel-producto .img-card img{
     width: 100%;
     aspect-ratio: 1/1;

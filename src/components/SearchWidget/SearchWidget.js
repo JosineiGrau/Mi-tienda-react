@@ -1,13 +1,16 @@
 import "./SearchWidget.css"
 import { useState } from "react"
+// import { useNavigate } from "react-router-dom"
 
 const SearchWidget = () => {
+    // const navigate = useNavigate()
 
     const [busqueda, setBusqueda] = useState("")
     // console.log(busqueda);
 
     const handleSubmit = (e)=>{
         e.preventDefault()
+        // navigate(`/Tecnologia/${busqueda}`)
     }
 
     const handleChange = (e)=>{

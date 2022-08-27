@@ -22,6 +22,17 @@
     justify-content: center;
     align-items: center;
 }
+.producto .producto-card .sin-stock{
+    background-color: rgb(233, 220, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.producto .producto-card .sin-stock span{
+    font-family: poppins;
+    font-size: 15px;
+}
 .producto .producto-card .producto-precio{
     display: flex;
     flex-flow: column nowrap;

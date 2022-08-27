@@ -4,7 +4,27 @@
 }
 .container-checkout{
     width: 100%;
+    padding: 200px 0;
 }
+.container-checkout .empty-cart-content{
+    padding: 50px 0;
+}
+.container-checkout .empty-cart-content h2{
+    font-size: 30px;
+    font-family: poppins;
+    color: black;
+}     
+.container-checkout .empty-cart-content .empty-cart-message{
+    margin-bottom: 25px;
+    font-family: poppins;
+}    
+.container-checkout .empty-cart-content .empty-cart-links a {
+    font-family: poppins;
+    font-size: 13px;
+    color: white;
+    background-color: black;
+    padding: 17px 19px;
+} 
 .container-checkout .cart-template{
     display: flex;
     flex-wrap: wrap;
@@ -14,25 +34,7 @@
 .container-checkout .cart-template .cart-template-holder{
     width: calc(70% - 20px);
 }
-.container-checkout .cart-template .cart-template-holder .empty-cart-content{
-    padding: 50px 0;
-    display: none;
-}   
-.container-checkout .cart-template .cart-template-holder .empty-cart-content h2{
-    font-size: 30px;
-    font-family: poppins;
-    color: black;
-}     
-.container-checkout .cart-template .cart-template-holder .empty-cart-content .empty-cart-message{
-    margin-bottom: 25px;
-}    
-.container-checkout .cart-template .cart-template-holder .empty-cart-content .empty-cart-links a {
-    font-family: poppins;
-    font-size: 13px;
-    color: white;
-    background-color: black;
-    padding: 17px 19px;
-} 
+
 .container-checkout .cart-template .cart-template-holder .cart{
     background-color: white;
     border-radius: 4px;
@@ -94,6 +96,9 @@
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-image a img{
     width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    cursor: pointer;
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-name{
     order: 2;
@@ -184,6 +189,9 @@
     color: black;
     margin-bottom: 20px;
 }
+.container-checkout .cart-template .price-total-template .finish-buy .tyc input{
+   margin-right: 5px;
+}
 .container-checkout .cart-template .price-total-template .finish-buy .tyc a{
     color: black;
     font-weight: bold;
@@ -194,7 +202,7 @@
     display: flex;
     text-align: center;
 }
-.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra a{
+.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra button{
     width: 100%;
     font-family:poppins;
     background-color: black;
@@ -205,7 +213,7 @@
     cursor: pointer;
     transition: 0.3s ease all;
 } 
-.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra a.disabled{
+.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra button.disabled{
     background-color: gray;
     opacity: 0.8;
     pointer-events: none;

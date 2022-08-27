@@ -1,6 +1,7 @@
 
 .carrusel{
     width: 100%;
+    padding-bottom: 70px;
 }
 .carrusel-list{
     position: relative;
@@ -29,7 +30,15 @@
 .carrusel-widget h2{
    font-size: 30px;
    font-family: poppins;
+   display: inline-block;
+   margin-right: 10px;
 }
+.carrusel-widget a{
+    font-size: 15px;
+    font-family: poppins;
+    color: black;
+    text-decoration: underline;
+ }
 
 /*buttons*/
 .buttons{

@@ -4,7 +4,7 @@ import "./Notification.css"
 const Notification = ({message, color, icon}) =>{
     const icons = {
         productToCart  : <i className="fa-solid fa-circle-check"></i>,
-        productoRemove : <i className="fa-solid fa-circle-xmark"></i>,
+        productRemove : <i className="fa-solid fa-circle-xmark"></i>,
         productToHeart : <i class="fa-solid fa-heart"></i>,
     }
 
@@ -41,7 +41,7 @@ export const NotificationProvider = ({children})=>{
         setIcon(icon)
         setTimeout(() => {
             setMessage("")
-        }, 3000);
+        }, 1500);
     }
 
     return(

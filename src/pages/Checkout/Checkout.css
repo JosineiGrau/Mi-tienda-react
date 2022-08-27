@@ -1,0 +1,315 @@
+.checkout{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout .form-checkout{
+    width: 850px;
+}
+.checkout .form-checkout .modal-check-out{
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+    -15px 15px 20px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    padding:40px;
+    border-radius: 5px;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .error h1{
+    font-family: poppins;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .producto-sin-stock-img{
+    width: 150px;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .producto-sin-stock-img img{
+    width: 100%;
+}
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .producto-sin-stock-name{
+    font-size: 15px;
+    font-family: poppins;
+    color: black;
+}
+
+
+
+.checkout .form-checkout .modal-check-out .error i{
+    font-size: 80px;
+}
+.checkout .form-checkout .modal-check-out h1{
+    font-family: poppins;
+    font-size: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.checkout .form-checkout .modal-check-out p{
+    font-family: poppins;
+    text-align: start;
+    font-size: 20px;
+}
+.checkout .form-checkout .modal-check-out .datos-ingresados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.checkout .form-checkout .modal-check-out .datos-ingresados .datos-mostrados p{
+    font-family: poppins;
+    font-size: 18px;
+    text-align: start;
+}
+.checkout .form-checkout .modal-check-out .datos-ingresados .datos-mostrados p span{
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.checkout .form-checkout .modal-check-out .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.checkout .form-checkout .modal-check-out .btns a{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: poppins;
+    cursor: pointer;
+}
+.checkout .form-checkout .modal-check-out .datos{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.checkout .form-checkout .modal-check-out .datos .name{
+    position: relative;
+}
+.checkout .form-checkout .modal-check-out .datos .name input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.checkout .form-checkout .modal-check-out .datos .name label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.checkout .form-checkout .modal-check-out .datos .name input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.checkout .form-checkout .modal-check-out .datos .lastname{
+    position: relative;
+}
+.checkout .form-checkout .modal-check-out .datos .lastname input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.checkout .form-checkout .modal-check-out .datos .lastname label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.checkout .form-checkout .modal-check-out .datos .lastname input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.checkout .form-checkout .modal-check-out .datos .email{
+    position: relative;
+}
+.checkout .form-checkout .modal-check-out .datos .email input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.checkout .form-checkout .modal-check-out .datos .email label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.checkout .form-checkout .modal-check-out .datos .email input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.checkout .form-checkout .modal-check-out .datos .address{
+    position: relative;
+}
+.checkout .form-checkout .modal-check-out .datos .address input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.checkout .form-checkout .modal-check-out .datos .address label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.checkout .form-checkout .modal-check-out .datos .address input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.checkout .form-checkout .modal-check-out .datos .phone{
+    position: relative;
+}
+.checkout .form-checkout .modal-check-out .datos .phone input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    border: 1px solid black;
+    outline: none;
+}
+.checkout .form-checkout .modal-check-out .datos .phone label{
+    position: absolute;
+    left: 0;
+    padding: 16px 11px;
+    pointer-events: none;
+    font-size: 15px;
+    font-family: poppins;
+    transition: 0.5s ease all
+}
+.checkout .form-checkout .modal-check-out .datos .phone input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
+    color:rgb(0, 0, 0);
+    transform: translateX(9px) translateY(-9px);
+    font-size: 13px;
+    background-color: white;
+    padding: 0 3px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+}
+.checkout .form-checkout .modal-check-out .btn-crear-orden{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: poppins;
+    cursor: pointer;
+}
+
+
+.checkout .form-checkout .modal-check-out .productos-comprados{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.checkout .form-checkout .modal-check-out .productos-comprados .producto-comprado-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkout .form-checkout .modal-check-out .productos-comprados .producto-comprado-content .producto-comprado-img{
+    width: 150px;
+}
+.checkout .form-checkout .modal-check-out .productos-comprados .producto-comprado-content .producto-comprado-img img{
+    width: 100%;
+}
+.checkout .form-checkout .modal-check-out .productos-comprados .producto-comprado-content .producto-comprado-name{
+    font-size: 15px;
+    font-family: poppins;
+    color: black;
+    width: 175px;
+    text-align: center;
+}

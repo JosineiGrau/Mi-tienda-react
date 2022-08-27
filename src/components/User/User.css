@@ -15,7 +15,7 @@
     transition: 0.3s ease all;
 }
 .user .sub-menu-user{
-    opacity: 0;
+    display: none;
     text-align: center;
     position: absolute;
     background-color: white;
@@ -28,7 +28,7 @@
     
 }
 .user .sub-menu-user.mostrar{
-    opacity: 1;
+    display: block;
     
 }
 .user .sub-menu-user::before{

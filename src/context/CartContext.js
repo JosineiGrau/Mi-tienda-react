@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 const CartContext = createContext()
 
@@ -22,6 +22,17 @@ export const CartContextProvider = ({children}) => {
             setCart(cartUpdate)
         }
     }
+
+    useEffect(() => {
+        const dataCarrito = JSON.parse(sessionStorage.getItem("cart"))
+        if(dataCarrito){
+            setCart(dataCarrito)
+        }
+    },[])
+
+    useEffect(() => {
+        sessionStorage.setItem("cart",JSON.stringify(cart))
+    },[cart])
 
 
     const clearCart = () =>{
@@ -74,9 +85,10 @@ export const CartContextProvider = ({children}) => {
         setCart(newCart)
     }
 
+    
 
     return(
-        <CartContext.Provider value={{cart , addItem, getQuantity, removeItem, clearCart, getPrice, aumentar,descontar}}>
+        <CartContext.Provider value={{cart , addItem, getQuantity, removeItem, clearCart, getPrice, aumentar,descontar,setCart}}>
             {children}
         </CartContext.Provider>
     )

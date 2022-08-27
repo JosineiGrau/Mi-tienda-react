@@ -6,7 +6,7 @@ import CartContext  from "../../context/CartContext"
 import NotificationContext from "../Notification/Notification"
 
 
-const ItemDetail = ({id,name,marca,price,img,imgs,description,stock}) =>{
+const ItemDetail = ({id,name,marca,price,img,imgs,description,stock,genero}) =>{
 
     const {addItem } = useContext(CartContext)
     
@@ -25,29 +25,29 @@ const ItemDetail = ({id,name,marca,price,img,imgs,description,stock}) =>{
         }
         addItem(productToAdd)
 
-        setNotification("Producto agregado", "correcto", "productToCart")
+        setNotification("Producto agregado al carrito", "correcto", "productToCart")
     }
     
     return(
             <div className="item-container container-content">
                 <section className="item-images-section">
                     <div className="images">
-                        <img src={img} alt={name}/>
+                        <img loading="lazy" src={img} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img2} alt={name}/>
+                        <img loading="lazy" src={imgs?.img2} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img3} alt={name}/>
+                        <img loading="lazy" src={imgs?.img3} alt={name}/>
                     </div>
                     <div className="images">
-                        <img src={imgs?.img4} alt={name}/>
+                        <img loading="lazy" src={imgs?.img4} alt={name}/>
                     </div>
                 </section>
                 <section className="item-detail-section">
                     <div className="detail-basic">
                         <div className="item-marca">
-                            <Link to={`/Tecnologia/Marca/${marca}`}>{marca}</Link>
+                            <Link to={`/${genero}/Marca/${marca}`}>{marca}</Link>
                         </div>
                         <div className="item-name">
                             <h1>{name}</h1>
@@ -60,7 +60,13 @@ const ItemDetail = ({id,name,marca,price,img,imgs,description,stock}) =>{
                                     <p>S/.{price}</p>
                                 </div>
                                 {
-                                    quantity === 0 ? (
+                                    stock === 0 ? (
+                                        <div className="sin-stock">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <span>Producto sin stock</span>
+                                        </div>  
+
+                                    ) : quantity === 0 ? (
                                         <Counter stock={stock} initial={1} onAdd={productosEnCarrito} label= "Agregar al carrito"/>
                                     ) : (
                                         <div className="page-cart">

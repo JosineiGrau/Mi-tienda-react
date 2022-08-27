@@ -20,8 +20,17 @@ const Counter = ({onAdd, stock, initial,label}) =>{
                         <button onClick={decrement} disabled = {count === initial ? true : null }>-</button>
                         <span>{count}</span>
                         <button onClick={increment} disabled = {count === stock ? true : null }>+</button>
+                        {
+                            count === stock ? (
+                                <div className="max-stock">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Solo puedes llevar {stock} unidades</span>
+                                </div>
+                            ) : (
+                                <span className="stock">máximo {stock}und</span>
+                            )
+                        }
                     </div>
-                    
                     <div className="item-add-to-card">
                         <button onClick={()=> onAdd(count)} disabled ={stock === 0 ? true : null}>{label}</button>
                     </div>

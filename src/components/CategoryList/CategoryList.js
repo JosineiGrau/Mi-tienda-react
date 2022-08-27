@@ -1,24 +1,39 @@
 import "./CategoryList.css"
 import { Link } from "react-router-dom"
 
-const CategoryList = () => {
+const CategoryList = ({genero,f1,f2,f3,f4,f5,img1,img2,img3,img4,img5,N1,N2,N3,N4,N5}) => {
     return(
         <div className="container marca-list">
-            <Link to="/Tecnologia/Category/Celular" className="celulares marca-img">
-                <strong>Celulares</strong>
-            </Link>
-            <Link to="/Tecnologia/Category/Tablet" className="tablets marca-img">
-                <strong>Tablets</strong>
-            </Link>
-            <Link to="/Tecnologia/Category/Laptop" className="laptos marca-img">
-                <strong>Laptops</strong>
-            </Link>
-            <Link to="/Tecnologia/Category/Televisor" className="televisores marca-img">
-                <strong>Televisores</strong>
-            </Link>
-            <Link to="/Tecnologia/Category/Reloj" className="smartwatch marca-img">
-                <strong>Smartwatch</strong>
-            </Link>
+            <div className="category">
+                <Link to={`/${genero}/Category/${f1}`} className="marca-img">
+                    <img src={img1} alt={img1}/>
+                </Link>
+                <strong>{N1}</strong>
+            </div>
+            <div className="category">
+                <Link to={`/${genero}/Category/${f2}`} className="marca-img">
+                    <img src={img2} alt={img2}/>
+                </Link>
+                <strong>{N2}</strong>
+            </div>
+            <div className="category">
+                <Link to={`/${genero}/Category/${f3}`} className="marca-img">
+                    <img src={img3} alt={img3}/>
+                </Link>
+                <strong>{N3}</strong>
+            </div>
+            <div className="category">
+                <Link to={`/${genero}/Category/${f4}`} className="marca-img">
+                    <img src={img4} alt={img4}/>
+                </Link>
+                <strong>{N4}</strong>
+            </div>
+            <div className="category">
+                <Link to={`/${genero}/Category/${f5}`} className="marca-img">
+                    <img src={img5} alt={img5}/>
+                </Link>
+                <strong>{N5}</strong>
+            </div>
         </div>
     )
 }

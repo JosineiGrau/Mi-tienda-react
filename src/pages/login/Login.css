@@ -118,12 +118,22 @@
     border-right: 1px solid black;
     letter-spacing: 0.7px;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password .error {
+/* .iniciar-sesion .modal-iniciar-sesion .email-password .password .error-forgot-password{
+    display: flex;
+    justify-content: space-between;
+} */
+.iniciar-sesion .modal-iniciar-sesion .email-password .password .error-forgot-password .error {
     color: red;
     font-family: poppins;
     font-size: 13px;
 }
-
+.iniciar-sesion .modal-iniciar-sesion .email-password .password .error-forgot-password a {
+    color: rgb(0, 0, 0);
+    font-family: poppins;
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-end;
+}
 .iniciar-sesion .modal-iniciar-sesion .checkbox label{
     font-family: poppins;
     font-size: 13px;

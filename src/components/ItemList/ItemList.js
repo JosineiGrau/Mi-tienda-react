@@ -5,20 +5,19 @@ import { useParams } from "react-router-dom"
 import { getDocs, collection, query, where } from "firebase/firestore"
 import { db } from "../../services/firebase"
 
-const ItemList = () => {
+const ItemList = ({genero}) => {
 
     const [products, setProducts] = useState([])
     const [loading , setLoading] = useState(false)
-    const {categoryId, marca, generoProd} = useParams()
+    const {categoryId, marca} = useParams()
     
-    console.log(categoryId);
-    
+    console.log(products);
     useEffect(()=>{
         setLoading(true)
 
-        const collectionRef =   generoProd ? query(collection(db, "productsList"), where("genero", "==", generoProd)):
-                                marca ? query(collection(db, "productsList"), where("marca", "==", marca )) :
-                                query(collection(db, "productsList"), where("category", "==", categoryId )) 
+        const collectionRef =   categoryId ? query(collection(db, "productsList"), where("category", "==", categoryId )) : marca ? query(collection(db, "productsList"), where("marca", "==", marca ))  : 
+                                genero ? query(collection(db, "productsList"), where("genero", "==", genero)) : null
+                                
 
         
 
@@ -35,7 +34,7 @@ const ItemList = () => {
         .finally(()=>{
             setLoading(false)
         })
-    },[categoryId,marca,generoProd]);
+    },[categoryId,marca,genero]);
 
     if(loading){
         return (
@@ -50,19 +49,28 @@ const ItemList = () => {
     return(
         <div className="productos-filtros container-content">
             <div className="productos">
-                {products.map(({name, price, img, id, stock,genero}) => {
-                    return(
-                        <Item 
-                        key={id}
-                        name={name}
-                        price={price}
-                        img={img}
-                        id={id}
-                        genero={genero}
-                        />
+                {
+                    products.length === 0 ? (
+                        <div className="sin-productos">
+                            <h2>En este momento no hay productos</h2>
+                        </div>
+                    ) : (
+                        products.map(({name, price, img, id, stock,genero}) => {
+                            return(
+                                <Item 
+                                key={id}
+                                name={name}
+                                price={price}
+                                img={img}
+                                id={id}
+                                genero={genero}
+                                stock={stock}
+                                />
+                            )
+                            
+                        })
                     )
-                    
-                })}
+                }
             </div>
         </div>
     )

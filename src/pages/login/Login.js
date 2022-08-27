@@ -5,24 +5,28 @@ import { useNavigate, Link } from "react-router-dom"
 
 const Login = () => {
 
-    const [ user, setUser ] = useState({
+    const [ formUser, setFormUser ] = useState({
         email: "",
         password: "",
     })
 
     const {login,loginWithGoogle} = useAuth()
+
+
+    
     const navigate = useNavigate()
+    
     const [error, setError] = useState()
-
-
+    
+    
     const handleChange = ({target: {name, value}}) => {
-        setUser({...user ,[name]: value})
+        setFormUser({...formUser ,[name]: value})
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError("")
         try{
-            await login(user.email, user.password)
+            await login(formUser.email, formUser.password)
             navigate("/")
 
         } catch(error) {
@@ -52,6 +56,7 @@ const Login = () => {
         try {
             await loginWithGoogle()
             navigate("/")
+
         } catch (error) {
             console.log(error.message);
         }
@@ -77,8 +82,11 @@ const Login = () => {
                         <div className="password">
                             <input type="password"  name="password" onChange={handleChange} />
                             <label htmlFor="password">Contraseña</label>
-                            {error === "Contraseña incorrecta" && <span className="error">{error}</span>}
-                            {error === "Campo vacio" && <span className="error">{error}</span>}
+                            <div className="error-forgot-password">
+                                {error === "Contraseña incorrecta" && <span className="error">{error}</span>}
+                                {error === "Campo vacio" && <span className="error">{error}</span>}
+                                <Link to ="/reset-password">Has olvidado tu contraseña?</Link>
+                            </div>
                         </div>
                     </div>
                     {/* <div className="checkbox">
