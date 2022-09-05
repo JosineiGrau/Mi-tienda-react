@@ -6,7 +6,7 @@ import { HeartProvider } from "./context/HeartContext"
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
-
+//PAGES
 import Inicio from './pages/Inicio';
 import Tecnologia from './pages/Tecnologia';
 import PageNotFound from './pages/PageNotFound';

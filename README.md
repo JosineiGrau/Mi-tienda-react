@@ -115,6 +115,9 @@ Inicie el servidor
     </Routes>
 </>
 ```
+## Gifs
+![Mi tienda y 4 páginas más - Personal_ Microsoft_ Edge 2022-09-04 20-22-05 - Compressed with FlexClip](https://user-images.githubusercontent.com/103330270/188345469-f32b0c79-ba5d-4ac6-a05e-baa8a76b60ca.gif)
+
 ## Screenshots
 
 ![App Screenshot](https://i.ibb.co/GJ9KP6T/Captura-de-pantalla-2022-09-04-201128.jpg)
@@ -134,12 +137,6 @@ Inicie el servidor
 ![App Screenshot](https://i.ibb.co/XjbR32n/Captura-de-pantalla-2022-09-04-201333.jpg)
 
 ![App Screenshot](https://i.ibb.co/jrJCjxG/Captura-de-pantalla-2022-09-04-201348.jpg)
-
-
-
-
-
-
 
 
 
