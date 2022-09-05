@@ -6,12 +6,11 @@ import { HeartProvider } from "./context/HeartContext"
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
-import NavBar from './components/NavBar/NavBar';
+
 import Inicio from './pages/Inicio';
 import Tecnologia from './pages/Tecnologia';
 import PageNotFound from './pages/PageNotFound';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Footer from './components/Footer/Footer';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Hombre from './pages/Hombre';
@@ -20,6 +19,7 @@ import Niño from './pages/Niño';
 import PageCartCheckout from './pages/PageCartCheckout/PageCartCheckout';
 import ResetPassword from './pages/resetPassword/Resetpassword';
 import Checkout from './pages/Checkout/Checkout';
+import Layout from './components/Layout';
 
 function App() {
   return (
@@ -27,31 +27,30 @@ function App() {
       <NotificationProvider>
         <CartContextProvider>
           <HeartProvider>
-            <NavBar/>
             <Routes>
 
-                <Route path='/' element={<Inicio/>}/>
+                <Route path='/' element={<Layout children={<Inicio/>}/>}/>
 
-                <Route path='Hombre' element ={<Hombre greeting={"Hombre"}/>}>
-                  <Route path='Category/:categoryId' element={<Hombre greeting={"Hombre"}/>}/>
-                  <Route path='Marca/:marca' element={<Hombre greeting={"Hombre"}/>}/>
+                <Route path='Hombre' element ={<Layout children={<Hombre greeting={"Hombre"}/>}/>}>
+                  <Route path='Category/:categoryId' element={<Layout children={<Hombre greeting={"Hombre"}/>}/>}/>
+                  <Route path='Marca/:marca' element={<Layout children={<Hombre greeting={"Hombre"}/>}/>}/>
                 </Route>
 
-                <Route path='Mujer' element ={<Mujer greeting={"Mujer"}/>}>
-                  <Route path='Category/:categoryId' element={<Mujer greeting={"Mujer"}/>}/>
-                  <Route path='Marca/:marca' element={<Mujer greeting={"Mujer"}/>}/>
+                <Route path='Mujer' element ={<Layout children={<Mujer greeting={"Mujer"}/>}/>}>
+                  <Route path='Category/:categoryId' element={<Layout children={<Mujer greeting={"Mujer"}/>}/>}/>
+                  <Route path='Marca/:marca' element={<Layout children={<Mujer greeting={"Mujer"}/>}/>}/>
                 </Route>
 
-                <Route path='Niño' element ={<Niño greeting={"Niño(a)"}/>}>
-                  <Route path='Marca/:marca' element={<Niño greeting={"Niño(a)"}/>}/>
+                <Route path='Niño' element ={<Layout children={<Niño greeting={"Niño(a)"}/>}/>}>
+                  <Route path='Marca/:marca' element={<Layout children={<Niño greeting={"Niño(a)"}/>}/>}/>
                 </Route>
 
-                <Route path='Tecnologia' element={<Tecnologia greeting={"Tecnologia"}/>}>
-                  <Route path='Category/:categoryId' element={<Tecnologia greeting={"Tecnologia"}/>}/>
-                  <Route path='Marca/:marca' element={<Tecnologia greeting={"Tecnologia"}/>}/>
+                <Route path='Tecnologia' element={<Layout children={<Tecnologia greeting={"Tecnologia"}/>}/>}>
+                  <Route path='Category/:categoryId' element={<Layout children={<Tecnologia greeting={"Tecnologia"}/>}/>}/>
+                  <Route path='Marca/:marca' element={<Layout children={<Tecnologia greeting={"Tecnologia"}/>}/>}/>
                 </Route>
 
-                <Route path=':genero/Detail/:productoId' element={<ItemDetailContainer/>}/>
+                <Route path=':genero/Detail/:productoId' element={<Layout children={<ItemDetailContainer/>}/>}/>
 
                 <Route path='not_found' element={<PageNotFound/>}/>
                 <Route path='*' element={<Navigate to="not_found" />}/>
@@ -63,7 +62,6 @@ function App() {
                 <Route path='checkout' element={<ProtectedRoute><Checkout/></ProtectedRoute>} />
 
             </Routes>
-            <Footer/>
           </HeartProvider>
         </CartContextProvider>
       </NotificationProvider>

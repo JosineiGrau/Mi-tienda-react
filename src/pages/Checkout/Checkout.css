@@ -6,6 +6,7 @@
 }
 .checkout .form-checkout{
     width: 850px;
+    background-color: white;
 }
 .checkout .form-checkout .modal-check-out{
     box-shadow: 0 0 20px rgba(0,0,0,0.1),
@@ -59,12 +60,19 @@
     font-family: poppins;
     color: black;
 }
-
-
-
-.checkout .form-checkout .modal-check-out .error i{
-    font-size: 80px;
+.checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .delete-product{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: poppins;
+    cursor: pointer;
 }
+
 .checkout .form-checkout .modal-check-out h1{
     font-family: poppins;
     font-size: 40px;
@@ -120,160 +128,15 @@
     flex-direction: column;
     gap: 30px;
 }
-.checkout .form-checkout .modal-check-out .datos .name{
-    position: relative;
-}
-.checkout .form-checkout .modal-check-out .datos .name input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: poppins; 
-    border: 1px solid black;
-    outline: none;
-}
-.checkout .form-checkout .modal-check-out .datos .name label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
+.checkout .form-checkout .modal-check-out .form-invalido span{
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+    background-color: rgb(213, 108, 108);
+    margin-top: 20px;
+    padding: 5px 8px;
     font-size: 15px;
     font-family: poppins;
-    transition: 0.5s ease all
-}
-.checkout .form-checkout .modal-check-out .datos .name input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
-}
-.checkout .form-checkout .modal-check-out .datos .lastname{
-    position: relative;
-}
-.checkout .form-checkout .modal-check-out .datos .lastname input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: poppins; 
-    border: 1px solid black;
-    outline: none;
-}
-.checkout .form-checkout .modal-check-out .datos .lastname label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: poppins;
-    transition: 0.5s ease all
-}
-.checkout .form-checkout .modal-check-out .datos .lastname input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
-}
-.checkout .form-checkout .modal-check-out .datos .email{
-    position: relative;
-}
-.checkout .form-checkout .modal-check-out .datos .email input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: poppins; 
-    border: 1px solid black;
-    outline: none;
-}
-.checkout .form-checkout .modal-check-out .datos .email label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: poppins;
-    transition: 0.5s ease all
-}
-.checkout .form-checkout .modal-check-out .datos .email input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
-}
-.checkout .form-checkout .modal-check-out .datos .address{
-    position: relative;
-}
-.checkout .form-checkout .modal-check-out .datos .address input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: poppins; 
-    border: 1px solid black;
-    outline: none;
-}
-.checkout .form-checkout .modal-check-out .datos .address label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: poppins;
-    transition: 0.5s ease all
-}
-.checkout .form-checkout .modal-check-out .datos .address input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
-}
-.checkout .form-checkout .modal-check-out .datos .phone{
-    position: relative;
-}
-.checkout .form-checkout .modal-check-out .datos .phone input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: poppins; 
-    border: 1px solid black;
-    outline: none;
-}
-.checkout .form-checkout .modal-check-out .datos .phone label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: poppins;
-    transition: 0.5s ease all
-}
-.checkout .form-checkout .modal-check-out .datos .phone input:valid ~ label , .checkout .form-checkout .modal-check-out .datos .name input:focus ~ label{
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
 }
 .checkout .form-checkout .modal-check-out .btn-crear-orden{
     display: flex;

@@ -49,6 +49,7 @@
 .overlay .modal .modal-content h4{
     font-size: 30px;
     font-family: poppins;
+    margin-bottom: 10px;
 }
 .overlay .modal .modal-content img{
     width: 100%;
@@ -56,4 +57,5 @@
 .overlay .modal .modal-content span{
     font-size: 20px;
     font-family: poppins;
+    text-align: center;
 }

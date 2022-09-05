@@ -6,7 +6,18 @@
 }
 .registrarse .form-register{
     width: 500px;
-    height: 450px;
+    height: 550px;
+    position: relative;
+}
+.registrarse .form-register .volver-inicio{
+    position: absolute;
+    font-size: 15px;
+    font-family: poppins;
+    color: black;
+    top: -25px;
+    left: 0px;
+    display: flex;
+    align-items: center;
 }
 .registrarse .modal-registrarse{
     box-shadow: 0 0 20px rgba(0,0,0,0.1),
@@ -322,4 +333,22 @@
 }
 .registrarse .modal-registrarse .btn-registrarse:disabled{
     opacity: 0.6;
+}
+
+.registrarse .modal-registrarse .btn-login{
+    display: inline-block;
+    padding: 10px 5px;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: poppins;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.registrarse .modal-registrarse .btn-login a{
+    color: white;
+}
+.registrarse .modal-registrarse .btn-login a i{
+    margin-left: 20px;
+    font-size: 20px;
 }

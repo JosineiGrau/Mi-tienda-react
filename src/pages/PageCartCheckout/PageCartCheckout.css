@@ -1,10 +1,45 @@
+.main-header{
+    background-color: white;
+    padding: 12px 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+.main-header .display-flex{
+    display: flex;
+    align-items: center;
+}
+.main-header .container{
+    max-width: 980px;
+    margin: auto;
+    position: relative;
+}
+.main-header .container .header-link{
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+.main-header .container .header-link a{
+    color: #000000;
+    font-size: 12px;
+    font-family:poppins ;
+}
+.main-header .container .header-link a i{
+    margin-right: 4px;
+}
+.main-header .container .logo {
+    font-size: 30px;
+    font-family:poppins ;
+    font-weight: 700;
+    color:black;
+}
+
+
 .container-cart{
     max-width: 980px;
     margin: auto;
 }
 .container-checkout{
     width: 100%;
-    padding: 200px 0;
 }
 .container-checkout .empty-cart-content{
     padding: 50px 0;
@@ -36,7 +71,7 @@
 }
 
 .container-checkout .cart-template .cart-template-holder .cart{
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 4px;
     padding: 20px 30px;
 }  
@@ -126,7 +161,7 @@
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-quantity button{
     border: none;
-    background-color: white;
+    background-color: transparent;
     font-size: 20px;
     width: 23px;
 }
@@ -143,13 +178,9 @@
     border: none;
     cursor: pointer;
 }
-.container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-remove button i{
-    color: black;
-    font-size: 15px
-}
 .container-checkout .cart-template .price-total-template{
     width: 30%;
-    background: white;
+    background: whitesmoke;
     padding: 20px;
     border-radius: 4px;
 }
@@ -213,7 +244,8 @@
     cursor: pointer;
     transition: 0.3s ease all;
 } 
-.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra button.disabled{
+.container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra button:disabled{
+    border: 1px solid gray;
     background-color: gray;
     opacity: 0.8;
     pointer-events: none;

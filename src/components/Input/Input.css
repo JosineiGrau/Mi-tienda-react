@@ -1,0 +1,38 @@
+.dato{
+    position: relative;
+}
+.dato .grupo-input{
+    position: relative;
+}
+.dato .grupo-input svg{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.dato .grupo-input input{
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 40px 16px 11px;
+    font-size: 15px;
+    font-family: poppins; 
+    outline: none;
+}
+.dato label {
+    position: absolute;
+    left: 9px;
+    top: -9px;
+    pointer-events: none;
+    font-size: 13px;
+    font-family: poppins;
+    transition: 0.5s ease all;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.7px;
+    padding: 0 3px;
+}
+.dato span{
+    font-family: poppins;
+    font-size: 13px;
+    color: red;
+}

@@ -67,6 +67,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.3s ease all;
+    font-family: poppins;
 }
 
 .producto .favorito{
@@ -76,8 +77,6 @@
     top: 4px;
     right: 4px;
     cursor: pointer;
-    color: black;
-    font-size: 25px;
     display: none;
 }
 .producto:hover .favorito{

@@ -1,44 +1,24 @@
-import { useState, useEffect } from "react"
-import { getDoc, doc } from "firebase/firestore"
-import { db } from "../../services/firebase"
-import ItemDetail from "../ItemDetail/ItemDetail"
-import { useParams } from "react-router-dom"
-import "./ItemDetailContainer.css"
+import "./ItemDetailContainer.css";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import Spinner from "../Spinner/Spinner";
+import { getProduct } from "../../services/firebase/firestore";
+import { useAsync } from "../../hooks/async";
 const ItemDetailContainer = () => {
-    const [product , setProduct] = useState()
-    const [loading , setLoading] = useState(false)
-    const {productoId} = useParams()
-    
-    
-    useEffect(()=>{
-        setLoading(true)
-        getDoc(doc(db, "productsList", productoId)).then(response => {
-            const data = response.data()
-            const productAdapted = {id : response.id, ...data}
-            setProduct(productAdapted)
-        })
-        .catch(error=>{
-            console.log(error);
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
-    }, [productoId])
+  const { productoId } = useParams();
 
-    if(loading){
-        return (
-            <div className="preloader">
-                <div className="preloader-content">
-                    <div className="carga"></div>
-                </div>
-            </div>
-        )
-    }
-    return(
-        <section className="item-section">          
-            {<ItemDetail {...product}/>}               
-        </section>
-    )
-}
+  const getProductFromFirestore = () => getProduct(productoId);
 
-export default ItemDetailContainer
+  const { data, error, isLoading } = useAsync(getProductFromFirestore, [
+    productoId,
+  ]);
+  if (isLoading) {
+    return <Spinner />;
+  }
+  if (error) {
+    console.error(error);
+  }
+  return <section className="item-section">{<ItemDetail {...data} />}</section>;
+};
+
+export default ItemDetailContainer;

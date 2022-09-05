@@ -2,7 +2,7 @@
     position: fixed;
     top:0px;
     right: 0px;
-    transition: 0.8s ease all;
+    transition: 0.4s ease-out all;
     transform: translateX(302px);
     opacity: 1;
     height: 100vh;
@@ -34,24 +34,22 @@
 .header .nav-bar .nav .nav-heart .row-1 .text-heart{
     color: #000000;
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 10px 0;
+    font-family: poppins;
+    margin-top: 50px;
     padding: 0 10px;
 }
 .header .nav-bar .nav .nav-heart .row-1 .close-heart{
-    display: block;
-    position: relative;
     background-color: transparent;
     border: none;
-    padding: 5px;
-    right: -250px;
-    width: 8%;
-    margin: 20px 0 0 0;
+    margin: 20px 20px 0 0;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .header .nav-bar .nav .nav-heart .row-1 .close-heart i{
-    font-size: 20px;
     transition: 0.3s ease all;
+    font-size: 20px;
     color: #000000
 }
 .header .nav-bar .nav .nav-heart .row-2{
@@ -66,24 +64,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.header .nav-bar .nav .nav-heart .row-2 .producto-heart i{
-    font-size: 30px;
-    color: #000000;
-    margin-bottom: 10px;
+    gap: 10px;
 }
 .header .nav-bar .nav .nav-heart .row-2 .producto-heart p{
     font-size: 20px;
     font-family: poppins;
     color: #000000;
-}
-
-.header .nav-bar .nav .nav-heart .lista{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
 }
 .header .nav-bar .nav .nav-heart .lista .lista-heart{
     display: flex;
@@ -142,10 +128,6 @@
     background:none;
     border: none;
     cursor: pointer;
-}
-.header .nav-bar .nav .nav-heart .lista .lista-heart .productos-en-heart .producto-en-heart .nombre-precio .nombre-producto button i{
-    color: black;
-    font-size: 15px
 }
 .header .nav-bar .nav .nav-heart .lista .lista-heart .productos-en-heart .producto-en-heart .nombre-precio .precio{
     display: flex;

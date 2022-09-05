@@ -31,18 +31,18 @@
 }
 .footer .footer-content .redes-sociales{
     display: flex;
+    flex-direction: column;
     gap: 15px;
 }
-.footer .footer-content .redes-sociales i{
-    color: black;
-    font-size: 25px;
+.footer .footer-content .redes-sociales a{
+    width: 25px;
+    height: 25px;
+}
+.footer .footer-content .redes-sociales svg:hover{
+    fill: #c4c4c4;
     transition: 0.3s ease all;
 }
-.footer .footer-content .redes-sociales i:hover{
-    color: #c4c4c4;
-}
-
-        
+   
 .franja{
     background-color: rgb(0, 0, 0);
     width: 100%;

@@ -3,14 +3,7 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-}
-.header .nav-bar .search-heart-car .heart i{
     padding: 5px 5px;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
     transition: 0.3s ease all;
 }
 .header .nav-bar .search-heart-car .heart span{
