@@ -31,7 +31,7 @@ const ItemListCarrusel = ({ greeting, genero }) => {
       <div className="carrusel-widget">
         <div>
           <h2>{greeting}</h2>
-          <Link to={`/${genero}/${genero}`}>Ver Todos</Link>
+          <Link to={`/${genero}`}>Ver Todos</Link>
         </div>
         <div className="buttons">
           <button
