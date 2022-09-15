@@ -12,7 +12,7 @@
 .registrarse .form-register .volver-inicio{
     position: absolute;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
     top: -25px;
     left: 0px;
@@ -28,12 +28,12 @@
     border-radius: 5px;
 }
 .registrarse .modal-registrarse h1{
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 40px;
 }
 .registrarse .modal-registrarse p{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 18px;
     margin-bottom: 50px
@@ -51,7 +51,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -61,7 +61,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .nombre input:valid ~ label ,.registrarse .modal-registrarse .formulario .nombre input:focus ~ label{
@@ -83,7 +83,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -93,7 +93,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .apellido input:valid ~ label ,.registrarse .modal-registrarse .formulario .apellido input:focus ~ label{
@@ -121,7 +121,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -136,7 +136,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:valid ~ label, .registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:focus ~ label{
@@ -158,7 +158,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -172,7 +172,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input:valid ~ label , .registrarse .modal-registrarse .formulario .fecha-de-nacimiento .mes input:focus ~ label{
@@ -194,7 +194,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -210,7 +210,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .fecha-de-nacimiento .año input:valid ~ label , .registrarse .modal-registrarse .formulario .fecha-de-nacimiento input:focus ~ label{
@@ -232,7 +232,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -242,7 +242,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .email input:valid ~ label , .registrarse .modal-registrarse .formulario .email input:focus ~ label{
@@ -257,7 +257,7 @@
 }
 .registrarse .modal-registrarse .formulario .email .error{ 
     color: red;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
 }
 .registrarse .modal-registrarse .formulario .password{
@@ -268,7 +268,7 @@
     background-color: transparent;
     padding: 16px 11px;
     font-size: 15px;
-    font-family: poppins; 
+    font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     outline: none;
 }
@@ -278,7 +278,7 @@
     padding: 16px 11px;
     pointer-events: none;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     transition: 0.5s ease all
 }
 .registrarse .modal-registrarse .formulario .password input:valid ~ label , .registrarse .modal-registrarse .formulario .password input:focus ~ label{
@@ -293,7 +293,7 @@
 }
 .registrarse .modal-registrarse .formulario .password .error{ 
     color: red;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
 }
 .registrarse .modal-registrarse .formulario .sexo{
@@ -303,13 +303,13 @@
 }
                
 .registrarse .modal-registrarse .formulario .sexo .sexo-hombre label{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size:15px;
     cursor: point
 }
                 
 .registrarse .modal-registrarse .formulario .sexo .sexo-mujer label{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size:15px;
     cursor: pointer;
 }
@@ -324,7 +324,7 @@
     color: white;
     margin-top: 20px;
     font-size: 18px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 .registrarse .modal-registrarse .btn-registrarse i{
@@ -341,7 +341,7 @@
     background-color: black;
     border: 1px solid black;
     font-size: 18px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     margin-top: 15px;
 }

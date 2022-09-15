@@ -7,14 +7,14 @@
     flex-flow: column nowrap;
 }
 .hero-content h1 {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     margin-bottom: 5px;
     letter-spacing: 1.2px;
     margin-bottom: 30px;
 }
 .hero-content a{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     color: white;
     background-color: black;

@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 .checkout .form-checkout .modal-check-out .productos-sin-stock .error h1{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -57,7 +57,7 @@
 }
 .checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .producto-sin-stock-name{
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
 }
 .checkout .form-checkout .modal-check-out .productos-sin-stock .producto-sin-stock .producto-sin-stock-content .delete-product{
@@ -69,12 +69,12 @@
     color: white;
     margin-top: 20px;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 
 .checkout .form-checkout .modal-check-out h1{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     margin-bottom: 30px;
     display: flex;
@@ -83,7 +83,7 @@
     gap: 10px;
 }
 .checkout .form-checkout .modal-check-out p{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     text-align: start;
     font-size: 20px;
 }
@@ -93,12 +93,12 @@
     gap: 5px;
 }
 .checkout .form-checkout .modal-check-out .datos-ingresados .datos-mostrados p{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     text-align: start;
 }
 .checkout .form-checkout .modal-check-out .datos-ingresados .datos-mostrados p span{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -120,7 +120,7 @@
     color: white;
     margin-top: 20px;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 .checkout .form-checkout .modal-check-out .datos{
@@ -136,7 +136,7 @@
     margin-top: 20px;
     padding: 5px 8px;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 .checkout .form-checkout .modal-check-out .btn-crear-orden{
     display: flex;
@@ -147,7 +147,7 @@
     color: white;
     margin-top: 20px;
     font-size: 18px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 
@@ -171,7 +171,7 @@
 }
 .checkout .form-checkout .modal-check-out .productos-comprados .producto-comprado-content .producto-comprado-name{
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
     width: 175px;
     text-align: center;

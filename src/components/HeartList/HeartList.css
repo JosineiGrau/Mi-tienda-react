@@ -34,7 +34,7 @@
 .header .nav-bar .nav .nav-heart .row-1 .text-heart{
     color: #000000;
     font-size: 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     margin-top: 50px;
     padding: 0 10px;
 }
@@ -68,7 +68,7 @@
 }
 .header .nav-bar .nav .nav-heart .row-2 .producto-heart p{
     font-size: 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: #000000;
 }
 .header .nav-bar .nav .nav-heart .lista .lista-heart{
@@ -121,7 +121,7 @@
 .header .nav-bar .nav .nav-heart .lista .lista-heart .productos-en-heart .producto-en-heart .nombre-precio .nombre-producto a{
     color: black;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     width: 80%;
 }
 .header .nav-bar .nav .nav-heart .lista .lista-heart .productos-en-heart .producto-en-heart .nombre-precio .nombre-producto button{
@@ -137,6 +137,6 @@
 }
 .header .nav-bar .nav .nav-heart .lista .lista-heart .productos-en-heart .producto-en-heart .nombre-precio .precio span{
     color: black;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }

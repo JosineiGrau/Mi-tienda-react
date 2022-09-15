@@ -21,14 +21,14 @@
 .main-header .container .header-link a{
     color: #000000;
     font-size: 12px;
-    font-family:poppins ;
+    font-family:'Poppins', sans-serif;
 }
 .main-header .container .header-link a i{
     margin-right: 4px;
 }
 .main-header .container .logo {
     font-size: 30px;
-    font-family:poppins ;
+    font-family:'Poppins', sans-serif;
     font-weight: 700;
     color:black;
 }
@@ -46,15 +46,15 @@
 }
 .container-checkout .empty-cart-content h2{
     font-size: 30px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
 }     
 .container-checkout .empty-cart-content .empty-cart-message{
     margin-bottom: 25px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }    
 .container-checkout .empty-cart-content .empty-cart-links a {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     color: white;
     background-color: black;
@@ -90,19 +90,19 @@
 }  
 .container-checkout .cart-template .cart-template-holder .cart .table thead tr .product{
     width: calc(100% - 235px);
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     text-align: left;
 }   
 .container-checkout .cart-template .cart-template-holder .cart .table thead tr .product-price{
     order: 5;
     width: 90px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 } 
 .container-checkout .cart-template .cart-template-holder .cart .table thead tr .quantity{
     order: 4;
     min-width: 60px;
-    font-family: poppins;
-} 
+    font-family: 'Poppins', sans-serif;
+}
 .container-checkout .cart-template .cart-template-holder .cart .table tbody{
     width: 100%;
     display: flex;
@@ -143,11 +143,11 @@
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-name a{
     color: black;
     font-weight: bold;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-price{
     font-weight: bold;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     order: 4;
     margin:  0 17px;
 }
@@ -167,7 +167,7 @@
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-quantity span{
     color: black;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
 .container-checkout .cart-template .cart-template-holder .cart .table tbody tr .product-remove{
@@ -199,7 +199,7 @@
 }
 .container-checkout .cart-template .price-total-template .summary table .totalizers tr td{
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 .container-checkout .cart-template .price-total-template .summary table tfoot tr{
     padding-top: 10px;
@@ -208,7 +208,7 @@
 }
 .container-checkout .cart-template .price-total-template .summary table tfoot tr td{
     font-size: 17px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 .container-checkout .cart-template .price-total-template .finish-buy{
@@ -216,7 +216,7 @@
 }
 .container-checkout .cart-template .price-total-template .finish-buy .tyc{
     font-size: 12px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
     margin-bottom: 20px;
 }
@@ -235,7 +235,7 @@
 }
 .container-checkout .cart-template .price-total-template .finish-buy .finalizar-compra button{
     width: 100%;
-    font-family:poppins;
+    font-family:'Poppins', sans-serif;
     background-color: black;
     color: white;
     padding: 17px 19px;

@@ -26,13 +26,13 @@
 }
 .carrusel-widget h2{
    font-size: 30px;
-   font-family: poppins;
+   font-family: 'Poppins', sans-serif;
    display: inline-block;
    margin-right: 10px;
 }
 .carrusel-widget a{
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: black;
     text-decoration: underline;
  }

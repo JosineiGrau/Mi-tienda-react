@@ -14,14 +14,14 @@
     gap: 50px;
 }
 .footer .footer-content .footer-resumen .footer-css span{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 .footer .footer-content .footer-resumen .footer-css .enlace{
     margin-top: 10px;
 }
 .footer .footer-content .footer-resumen .footer-css a{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     color: gray;
     transition: .3s ease all;
@@ -58,7 +58,7 @@
 .franja .franja-content p{ 
     color: white;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
        
 

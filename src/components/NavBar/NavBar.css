@@ -23,7 +23,7 @@
     border: none;
     cursor: pointer;
     font-size: 13px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -41,7 +41,7 @@
 }
 .header .nav-bar a{
     font-size: 35px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;;
     color: black;
 }
 .header .nav-bar .menu-hamburguesa{
@@ -87,7 +87,7 @@
     background-color: transparent;
     border: none;
     color: black;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     text-decoration: none;
     transition: 0.3s ease all;
@@ -138,7 +138,7 @@
 .header .nav-bar .nav .nav-carrito .row-1 .textCarrito{
     color: #000000;
     font-size: 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     margin-top: 50px;
     padding: 0 10px;
 }
@@ -172,7 +172,7 @@
 }
 .header .nav-bar .nav .nav-carrito .row-2 .producto-carrito p{
     font-size: 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: #000000;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar{
@@ -233,7 +233,7 @@
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto a{
     color: black;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     width: 80%;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .nombre-producto button{
@@ -249,7 +249,7 @@
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio span{
     color: black;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad {
@@ -282,7 +282,7 @@
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .lista-carrito .productos-en-carrito .producto-en-carrito .filtro-nombre-precio .filtro-precio .cantidad .numeroCantidad{
     color: black;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     width: 30px;
     border: none;
@@ -297,23 +297,27 @@
     padding: 30px 20px;
     box-shadow: 0 0px 15px rgba(0,0,0,15%);
 }
+.header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora p{
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal {
     margin-bottom: 20px ;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal p{
     font-size: 16px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .precioTotal span{
     font-size: 16px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .comprar{
     margin-top: 15px;
 }
 .header .nav-bar .nav .nav-carrito .lista-y-comprar .comprar-ahora .comprar button{
     font-size: 18px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     background-color: #000;
     color: white;
     border: white;

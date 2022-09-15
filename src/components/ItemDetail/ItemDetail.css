@@ -39,7 +39,7 @@
 }
 .item-container .item-detail-section .detail-basic .item-marca a{
     color: black;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
 }
 .item-container .item-detail-section .detail-basic .item-name{
@@ -47,20 +47,18 @@
     justify-content: flex-start;
 }
 .item-container .item-detail-section .detail-basic .item-name h1{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     text-align: initial;
 }
 .item-container .item-detail-section .item-specifications{
     display: flex;
     justify-content: flex-start;
-    /* align-items: center; */
 }
 .item-container .item-detail-section .item-specifications .item-specification-column{
     display: flex;
     flex-flow: column wrap;
     gap: 10px;
-    /* border: 1px red solid; */
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .sin-stock{ 
     background-color: rgb(233, 220, 109);
@@ -70,20 +68,20 @@
     gap: 5px;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .sin-stock span{ 
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .item-price{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .page-cart span{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 17px;
     color: black;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .item-description{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     margin-bottom: 15px;
 }
@@ -92,45 +90,14 @@
     flex-direction: column;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .availability .availability-container .type-delivery{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 3px;
 }
 .item-container .item-detail-section .item-specifications .item-specification-column .availability .availability-container .availability-item{
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     display: flex;
     gap: 5px;
 }
-/* .item-container .item-detail-section .item-specifications .item-specification-column .item-caracteristicas{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    border: 1px salmon solid;
-
-}
-.item-container .item-detail-section .item-specifications .item-specification-column .item-caracteristicas .specifications-title{
-    font-family: poppins;
-    font-size: 15px;
-}
-.item-container .item-detail-section .item-specifications .item-specification-column .item-caracteristicas .specifications-list ul{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-.item-container .item-detail-section .item-specifications .item-specification-column .item-caracteristicas .specifications-list ul li{
-    font-family: poppins;
-    font-size: 13px;
-    text-align: start;
-}
-.item-container .item-detail-section .item-specifications .item-specification-column .item-caracteristicas a{
-    color: black;
-    font-size: 13px;
-    font-family: poppins;
-    text-align: center;
-    text-decoration:underline;
-} */
-/* .item-container .item-detail-section .item-specifications .item-specification-column .availability {
-    border: 1px solid black; 
-} */
