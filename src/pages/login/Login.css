@@ -1,185 +1,232 @@
-.iniciar-sesion{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iniciar-sesion {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.iniciar-sesion .form-login{
-    width: 500px;
-    height: 550px;
-    position: relative;
+.iniciar-sesion .form-login {
+	width: 500px;
+	height: 550px;
+	position: relative;
 }
-.iniciar-sesion .form-login .volver-inicio{
-    position: absolute;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    top: -25px;
-    left: 0px;
-    display: flex;
-    align-items: center;
+.iniciar-sesion .form-login .volver-inicio {
+	position: absolute;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	color: black;
+	top: -25px;
+	left: 0px;
+	display: flex;
+	align-items: center;
 }
-.iniciar-sesion .modal-iniciar-sesion{
-    box-shadow: 0 0 20px rgba(0,0,0,0.1),
-                -15px 15px 20px rgba(0,0,0,0.3);
-    width: 100%;
-    height: 100%;
-    padding:40px;
-    border-radius: 5px;
+.iniciar-sesion .modal-iniciar-sesion {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), -15px 15px 20px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	border-radius: 5px;
 }
-.iniciar-sesion .modal-iniciar-sesion h1{
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 40px;
+.iniciar-sesion .modal-iniciar-sesion h1 {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-size: 40px;
 }
-.iniciar-sesion .modal-iniciar-sesion .btns-terceros .btns-login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iniciar-sesion .modal-iniciar-sesion .error {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-size: 15px;
+	color: red;
 }
-.iniciar-sesion .modal-iniciar-sesion .btns-terceros .btns-login .btn-iniciar-sesion-tercero {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding: 10px 5px;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 20%;
-    color: white;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 40px;
+.iniciar-sesion .modal-iniciar-sesion .btns-terceros .btns-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 40px;
 }
-.iniciar-sesion .modal-iniciar-sesion .btns-terceros .btns-login .btn-iniciar-sesion-tercero i{
-    font-size: 20px;
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.btns-terceros
+	.btns-login
+	.btn-iniciar-sesion-tercero {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	padding: 10px 5px;
+	background-color: black;
+	border: 1px solid black;
+	border-radius: 20%;
+	color: white;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+}
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.btns-terceros
+	.btns-login
+	.btn-iniciar-sesion-tercero
+	i {
+	font-size: 20px;
 }
 
-.iniciar-sesion .modal-iniciar-sesion .email-password{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.iniciar-sesion .modal-iniciar-sesion .email-password {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-top: 20px;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .email{
-    position: relative;
+.iniciar-sesion .modal-iniciar-sesion .email-password .email {
+	position: relative;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .email input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid black;
-    outline: none;
+.iniciar-sesion .modal-iniciar-sesion .email-password .email input {
+	width: 100%;
+	background-color: transparent;
+	padding: 16px 11px;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	border: 1px solid black;
+	outline: none;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .email label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.5s ease all
+.iniciar-sesion .modal-iniciar-sesion .email-password .email label {
+	position: absolute;
+	left: 0;
+	padding: 16px 11px;
+	pointer-events: none;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	transition: 0.5s ease all;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .email input:valid ~ label , .iniciar-sesion .modal-iniciar-sesion .email-password .email input:focus ~ label {
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.email
+	input:valid
+	~ label,
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.email
+	input:focus
+	~ label {
+	color: rgb(0, 0, 0);
+	transform: translateX(9px) translateY(-9px);
+	font-size: 13px;
+	background-color: white;
+	padding: 0 3px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	letter-spacing: 0.7px;
 }
 .iniciar-sesion .modal-iniciar-sesion .email-password .email .error {
-    color: red;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+	color: red;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password{
-    margin-bottom: 10px;
-    position: relative;
+.iniciar-sesion .modal-iniciar-sesion .email-password .password {
+	margin-bottom: 10px;
+	position: relative;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password input{
-    width: 100%;
-    background-color: transparent;
-    padding: 16px 11px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid black;
-    outline: none;
+.iniciar-sesion .modal-iniciar-sesion .email-password .password input {
+	width: 100%;
+	background-color: transparent;
+	padding: 16px 11px;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	border: 1px solid black;
+	outline: none;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password label{
-    position: absolute;
-    left: 0;
-    padding: 16px 11px;
-    pointer-events: none;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.5s ease all
+.iniciar-sesion .modal-iniciar-sesion .email-password .password label {
+	position: absolute;
+	left: 0;
+	padding: 16px 11px;
+	pointer-events: none;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	transition: 0.5s ease all;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password input:valid ~ label , .iniciar-sesion .modal-iniciar-sesion .email-password .password input:focus ~ label {
-    color:rgb(0, 0, 0);
-    transform: translateX(9px) translateY(-9px);
-    font-size: 13px;
-    background-color: white;
-    padding: 0 3px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    letter-spacing: 0.7px;
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.password
+	input:valid
+	~ label,
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.password
+	input:focus
+	~ label {
+	color: rgb(0, 0, 0);
+	transform: translateX(9px) translateY(-9px);
+	font-size: 13px;
+	background-color: white;
+	padding: 0 3px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	letter-spacing: 0.7px;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password .error-forgot-password .error {
-    color: red;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.password
+	.error-forgot-password
+	.error {
+	color: red;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
 }
-.iniciar-sesion .modal-iniciar-sesion .email-password .password .error-forgot-password a {
-    color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    display: flex;
-    justify-content: flex-end;
+.iniciar-sesion
+	.modal-iniciar-sesion
+	.email-password
+	.password
+	.error-forgot-password
+	a {
+	color: rgb(0, 0, 0);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	display: flex;
+	justify-content: flex-end;
 }
-.iniciar-sesion .modal-iniciar-sesion .checkbox label{
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+.iniciar-sesion .modal-iniciar-sesion .checkbox label {
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
 }
-.iniciar-sesion .modal-iniciar-sesion .checkbox a{
-    text-transform: uppercase;
-    color: black;
-    text-decoration:underline ;
+.iniciar-sesion .modal-iniciar-sesion .checkbox a {
+	text-transform: uppercase;
+	color: black;
+	text-decoration: underline;
 }
 .iniciar-sesion .modal-iniciar-sesion .btn-iniciar-sesion {
-    display: flex;
-    align-items: center;
-    padding: 10px 5px;
-    background-color: black;
-    border: 1px solid black;
-    color: white;
-    margin-top: 20px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 10px 5px;
+	background-color: black;
+	border: 1px solid black;
+	color: white;
+	margin-top: 20px;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
 }
-.iniciar-sesion .modal-iniciar-sesion .btn-iniciar-sesion i{
-    margin-left: 20px;
-    font-size: 20px;
+.iniciar-sesion .modal-iniciar-sesion .btn-iniciar-sesion i {
+	margin-left: 20px;
+	font-size: 20px;
 }
-.iniciar-sesion .modal-iniciar-sesion .btn-register{
-    display: inline-block;
-    padding: 10px 5px;
-    background-color: black;
-    border: 1px solid black;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    margin-top: 15px;
+.iniciar-sesion .modal-iniciar-sesion .btn-register {
+	display: inline-block;
+	padding: 10px 5px;
+	background-color: black;
+	border: 1px solid black;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+	margin-top: 15px;
 }
-.iniciar-sesion .modal-iniciar-sesion .btn-register a{
-    color: white;
+.iniciar-sesion .modal-iniciar-sesion .btn-register a {
+	color: white;
 }
-.iniciar-sesion .modal-iniciar-sesion .btn-register a i{
-    margin-left: 20px;
-    font-size: 20px;
+.iniciar-sesion .modal-iniciar-sesion .btn-register a i {
+	margin-left: 20px;
+	font-size: 20px;
 }
